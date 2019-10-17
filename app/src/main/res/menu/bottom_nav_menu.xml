@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item
+        android:id="@+id/action_home"
+        android:enabled="true"
+        android:icon="@drawable/round_home_24"
+        android:iconTint="#54D3AD"
+        android:title="Home"
+        app:showAsAction="ifRoom"
+
+        />
+
+    <item
+        android:id="@+id/action_goal"
+        android:enabled="true"
+        android:icon="@drawable/round_emoji_events_24"
+        android:iconTint="#A6AAB4"
+        android:title="Goals"
+        app:showAsAction="ifRoom" />
+
+
+    <item
+        android:id="@+id/action_add"
+        android:enabled="true"
+        android:iconTint="#A6AAB4"
+        android:title=""
+        app:showAsAction="always"
+
+        />
+
+
+    <item
+        android:id="@+id/action_stat"
+        android:enabled="true"
+        android:icon="@drawable/round_pie_chart_24"
+        android:iconTint="#A6AAB4"
+        android:title="Statistics"
+        app:showAsAction="ifRoom"
+
+        />
+
+
+    <item
+        android:id="@+id/action_setting"
+        android:enabled="true"
+        android:icon="@drawable/round_tune_24"
+        android:iconTint="#A6AAB4"
+        android:title="Setting"
+        app:showAsAction="always"
+
+        />
+
+
+
+
+</menu>
