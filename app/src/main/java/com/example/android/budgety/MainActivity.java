@@ -15,7 +15,12 @@ public class MainActivity extends AppCompatActivity {
     public void openHomePage() {
         Intent intent = new Intent(this,Home_page.class);
         startActivity(intent);
-    }
+}
+
+public void OpenSignUp(){
+    Intent intent = new Intent(this,Signup.class);
+    startActivity(intent);
+}
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +30,9 @@ public class MainActivity extends AppCompatActivity {
 
         Button signIn = (Button) findViewById(R.id.sing_in);
 
+        Button SignUp =(Button) findViewById(R.id.signup);
+
+
 
         signIn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -32,6 +40,18 @@ public class MainActivity extends AppCompatActivity {
                 openHomePage();
             }
         });
+
+        SignUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                OpenSignUp();
+            }
+        });
+
+
+
+
+
 
     }
 
