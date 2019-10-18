@@ -5,89 +5,111 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#10C971"
-    tools:context=".MainActivity">
-
+    tools:context=".Signup">
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/signup"
+        android:id="@+id/SignIn"
         style="@style/Widget.MaterialComponents.Button.TextButton"
-        android:layout_width="wrap_content"
-        android:layout_height="35dp"
+        android:layout_width="69dp"
 
+        android:layout_height="36dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="-1dp"
-        android:layout_marginLeft="-1dp"
-        android:layout_marginEnd="132dp"
-        android:layout_marginRight="132dp"
-        android:layout_marginBottom="55dp"
-        android:layout_toEndOf="@+id/textView3"
-        android:layout_toRightOf="@+id/textView3"
-        android:text="SignUp"
+        android:layout_marginStart="-8dp"
+        android:layout_marginLeft="-8dp"
+        android:layout_marginEnd="104dp"
+        android:layout_marginRight="104dp"
+        android:layout_marginBottom="29dp"
+        android:layout_toEndOf="@+id/textView15"
+        android:layout_toRightOf="@+id/textView15"
+        android:text="Sign In"
         android:textColor="#E1536138"
         android:textSize="11sp" />
 
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="120dp"
+        android:layout_marginLeft="120dp"
+        android:layout_marginBottom="38dp"
+        android:text="Already a member ?"
+        android:textColor="#FFFFFF" />
+
     <EditText
-        android:id="@+id/password"
+        android:id="@+id/UserName_SignUp"
+        android:layout_width="312dp"
+        android:layout_height="53dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="217dp"
+        android:background="#FFFFFF"
+        android:ems="10"
+        android:hint="  Username"
+        android:inputType="text" />
+
+    <Button
+        android:id="@+id/SignUp_Action"
+        android:layout_width="168dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="75dp"
+        android:background="#C14CD6"
+        android:text="SignUp"
+        app:backgroundTint="#E1A9D64C" />
+
+    <EditText
+        android:id="@+id/password_SignUp"
         style="@style/Base.Widget.MaterialComponents.AutoCompleteTextView"
         android:layout_width="313dp"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="223dp"
+        android:layout_marginBottom="144dp"
         android:background="#FFFFFF"
         android:ems="10"
         android:hint="Password"
         android:inputType="textPassword" />
 
     <EditText
-        android:id="@+id/editText4"
+        android:id="@+id/Email_SignUp"
         android:layout_width="312dp"
         android:layout_height="53dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="293dp"
+        android:layout_marginBottom="286dp"
         android:background="#FFFFFF"
         android:ems="10"
         android:hint="  Email"
         android:inputType="textEmailAddress" />
 
-    <Button
-        android:id="@+id/sing_in"
-        android:layout_width="168dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="130dp"
-        android:background="#C14CD6"
-        android:text="Sign In"
-        app:backgroundTint="#E1A9D64C" />
-
     <View
-        android:id="@+id/view"
+        android:id="@+id/view5"
         android:layout_width="match_parent"
         android:layout_height="295dp"
 
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="0dp" />
+        android:layout_alignParentTop="true" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/imageView5"
         android:layout_width="match_parent"
         android:layout_height="416dp"
-
-        android:layout_alignParentStart="true"
 
         android:layout_alignParentTop="true"
 
         android:layout_centerVertical="true"
 
         android:layout_marginTop="-68dp"
+
         app:srcCompat="@mipmap/logo" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textView13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -98,7 +120,7 @@
         android:textSize="36sp" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textView14"
         android:layout_width="184dp"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/imageView2"
@@ -107,24 +129,10 @@
         android:layout_alignParentRight="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="252dp"
-        android:layout_marginEnd="112dp"
-        android:layout_marginRight="112dp"
+        android:layout_marginEnd="109dp"
+        android:layout_marginRight="109dp"
         android:layout_marginBottom="36dp"
         android:text="Take control of your Money"
         android:textColor="#C2E04A" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="119dp"
-        android:layout_marginLeft="116dp"
-        android:layout_marginBottom="63dp"
-        android:text="Not a member?"
-        android:textColor="#FFFFFF" />
-
 
 </RelativeLayout>
