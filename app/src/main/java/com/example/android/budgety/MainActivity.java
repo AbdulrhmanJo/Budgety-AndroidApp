@@ -39,11 +39,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-<<<<<<< HEAD
 
-
-=======
->>>>>>> 8e9a98b179b076941ea43d7dc8a3ad790080f97b
         signIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
