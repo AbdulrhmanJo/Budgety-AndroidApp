@@ -13,7 +13,6 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-
     public void openHomePage() {
         Intent intent = new Intent(this,Home_page.class);
         startActivity(intent);
@@ -40,8 +39,11 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 8e9a98b179b076941ea43d7dc8a3ad790080f97b
         signIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -71,9 +73,6 @@ public class MainActivity extends AppCompatActivity {
                 OpenSignUp();
             }
         });
-
-
-
 
 
 

@@ -8,20 +8,33 @@
     tools:context=".MainActivity">
 
 
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="136dp"
+        android:layout_marginLeft="131dp"
+        android:layout_marginStart="131dp"
+        android:text="Not a member?"
+        android:textColor="#FFFFFF" />
+
     <com.google.android.material.button.MaterialButton
         android:id="@+id/signup"
         style="@style/Widget.MaterialComponents.Button.TextButton"
         android:layout_width="wrap_content"
         android:layout_height="35dp"
 
+        android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="-1dp"
-        android:layout_marginLeft="-1dp"
-        android:layout_marginEnd="132dp"
-        android:layout_marginRight="132dp"
-        android:layout_marginBottom="55dp"
+        android:layout_marginBottom="128dp"
+        android:layout_marginEnd="122dp"
+        android:layout_marginLeft="-9dp"
+        android:layout_marginRight="122dp"
+        android:layout_marginStart="-9dp"
         android:layout_toEndOf="@+id/textView3"
         android:layout_toRightOf="@+id/textView3"
         android:text="SignUp"
@@ -35,7 +48,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="223dp"
+        android:layout_marginBottom="268dp"
         android:background="#FFFFFF"
         android:ems="10"
         android:hint="Password"
@@ -47,7 +60,7 @@
         android:layout_height="53dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="293dp"
+        android:layout_marginBottom="335dp"
         android:background="#FFFFFF"
         android:ems="10"
         android:hint="  Email"
@@ -59,7 +72,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="130dp"
+        android:layout_marginBottom="191dp"
         android:background="#C14CD6"
         android:text="Sign In"
         app:backgroundTint="#E1A9D64C" />
@@ -83,7 +96,8 @@
 
         android:layout_centerVertical="true"
 
-        android:layout_marginTop="-68dp"
+        android:layout_marginStart="-4dp"
+        android:layout_marginTop="-108dp"
         app:srcCompat="@mipmap/logo" />
 
     <TextView
@@ -92,22 +106,30 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="197dp"
+        android:layout_marginTop="155dp"
         android:text="Budgety"
         android:textColor="#FFFFFF"
         android:textSize="36sp" />
 
     <TextView
         android:id="@+id/textView2"
+<<<<<<< HEAD
         android:layout_width="196dp"
         android:layout_height="29dp"
         android:layout_above="@+id/Email_SignIn"
         android:layout_below="@+id/textView"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
+=======
+        android:layout_width="184dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imageView2"
+>>>>>>> 8e9a98b179b076941ea43d7dc8a3ad790080f97b
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
+<<<<<<< HEAD
         android:layout_marginStart="107dp"
         android:layout_marginLeft="107dp"
         android:layout_marginTop="18dp"
@@ -142,5 +164,14 @@
         android:layout_marginBottom="197dp"
         android:textColor="#FF0000" />
 
+=======
+        android:layout_marginBottom="81dp"
+        android:layout_marginEnd="112dp"
+        android:layout_marginRight="112dp"
+        android:layout_marginTop="207dp"
+        android:text="Take control of your Money"
+        android:textColor="#C2E04A" />
+
+>>>>>>> 8e9a98b179b076941ea43d7dc8a3ad790080f97b
 
 </RelativeLayout>

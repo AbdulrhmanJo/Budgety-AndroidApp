@@ -24,14 +24,14 @@
         android:layout_width="69dp"
 
         android:layout_height="36dp"
+        android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="-8dp"
-        android:layout_marginLeft="-8dp"
-        android:layout_marginEnd="104dp"
-        android:layout_marginRight="104dp"
-        android:layout_marginBottom="29dp"
+        android:layout_marginBottom="70dp"
+        android:layout_marginEnd="106dp"
+        android:layout_marginLeft="-10dp"
+        android:layout_marginRight="106dp"
+        android:layout_marginStart="-10dp"
         android:layout_toEndOf="@+id/textView15"
         android:layout_toRightOf="@+id/textView15"
         android:text="Sign In"
@@ -42,12 +42,12 @@
         android:id="@+id/textView15"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="120dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="78dp"
         android:layout_marginLeft="120dp"
-        android:layout_marginBottom="38dp"
+        android:layout_marginStart="120dp"
         android:text="Already a member ?"
         android:textColor="#FFFFFF" />
 
@@ -57,20 +57,41 @@
         android:layout_height="53dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="217dp"
+        android:layout_marginBottom="264dp"
         android:background="#FFFFFF"
         android:ems="10"
         android:hint="  Username"
         android:inputType="text" />
 
+<<<<<<< HEAD
+=======
+
+    <Button
+        android:id="@+id/SignUp_Action"
+        android:layout_width="168dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="119dp"
+        android:text="Sign Up"
+        app:backgroundTint="#E1A9D64C" />
+
+>>>>>>> 8e9a98b179b076941ea43d7dc8a3ad790080f97b
     <EditText
         android:id="@+id/password_SignUp"
         style="@style/Base.Widget.MaterialComponents.AutoCompleteTextView"
         android:layout_width="313dp"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="144dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="197dp"
+        android:layout_marginEnd="49dp"
+        android:layout_marginLeft="48dp"
+        android:layout_marginRight="49dp"
+        android:layout_marginStart="48dp"
         android:background="#FFFFFF"
         android:ems="10"
         android:hint="Password"
@@ -82,7 +103,7 @@
         android:layout_height="53dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="286dp"
+        android:layout_marginBottom="330dp"
         android:background="#FFFFFF"
         android:ems="10"
         android:hint="  Email"
@@ -104,7 +125,7 @@
 
         android:layout_centerVertical="true"
 
-        android:layout_marginTop="-68dp"
+        android:layout_marginTop="-107dp"
 
         app:srcCompat="@mipmap/logo" />
 
@@ -134,9 +155,28 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="197dp"
+        android:layout_marginTop="155dp"
         android:text="Budgety"
         android:textColor="#FFFFFF"
         android:textSize="36sp" />
 
+<<<<<<< HEAD
+=======
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="184dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imageView2"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="36dp"
+        android:layout_marginEnd="110dp"
+        android:layout_marginRight="110dp"
+        android:layout_marginTop="211dp"
+        android:text="Take control of your Money"
+        android:textColor="#C2E04A" />
+
+>>>>>>> 8e9a98b179b076941ea43d7dc8a3ad790080f97b
 </RelativeLayout>
