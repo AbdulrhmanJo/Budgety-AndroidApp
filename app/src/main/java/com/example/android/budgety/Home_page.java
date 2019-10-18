@@ -3,6 +3,7 @@ package com.example.android.budgety;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.autofill.AutofillValue;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
@@ -27,8 +28,11 @@ public class Home_page extends AppCompatActivity {
 
 
         for (int i = 0; i <20 ; i++) {
-            Button b = new Button(this);
-            b.setText("HeLloo");
+            MaterialCardView b = new MaterialCardView(this);
+            TextView v = new TextView(this);
+            v.setText("Hello");
+            v.setPadding(50,50,50,50);
+            b.addView(v);
             container.addView(b);
         }
 

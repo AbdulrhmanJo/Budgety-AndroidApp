@@ -29,8 +29,8 @@ public void OpenSignUp(){
 
 
         Button signIn = (Button) findViewById(R.id.sing_in);
-
         Button SignUp =(Button) findViewById(R.id.signup);
+
 
 
 
@@ -47,9 +47,6 @@ public void OpenSignUp(){
                 OpenSignUp();
             }
         });
-
-
-
 
 
 

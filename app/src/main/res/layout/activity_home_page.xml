@@ -214,25 +214,32 @@
             </com.google.android.material.card.MaterialCardView>
 
         </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <LinearLayout
+                android:id="@+id/transaction_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingLeft="25dp"
+                android:paddingRight="25dp">
+                >
+
+
+
+
+            </LinearLayout>
+        </ScrollView>
+
+
     </LinearLayout>
 
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        >
 
-        <LinearLayout
-            android:id="@+id/transaction_container"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
-
-
-
-        </LinearLayout>
-    </ScrollView>
 
 
 
