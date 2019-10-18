@@ -12,7 +12,6 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-
     public void openHomePage() {
         Intent intent = new Intent(this,Home_page.class);
         startActivity(intent);
@@ -24,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        Button signIn = (Button) findViewById(R.i.sing_in);
+        Button signIn = (Button) findViewById(R.id.sing_in);
 
 
         signIn.setOnClickListener(new View.OnClickListener() {
