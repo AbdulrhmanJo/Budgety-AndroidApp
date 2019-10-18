@@ -8,6 +8,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -18,10 +19,14 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
 }
 
-public void OpenSignUp(){
+    public void OpenSignUp(){
     Intent intent = new Intent(this,Signup.class);
     startActivity(intent);
 }
+
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,10 +38,30 @@ public void OpenSignUp(){
         Button SignUp =(Button) findViewById(R.id.signup);
 
 
+
+
+
+
         signIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                TextView error = (TextView) findViewById(R.id.Wrong);
+
+                EditText Email = (EditText) findViewById(R.id.Email_SignIn) ;
+                String Str_Email = Email.getText().toString();
+
+                EditText Password= (EditText) findViewById(R.id.password_SignIn);
+                String Str_Password = Password.getText().toString();
+
+
+                if(Str_Email.equalsIgnoreCase("rayan")&&Str_Password.equals("123")){
                 openHomePage();
+
+                }else{
+                    error.setText("Wrong Entery ..Please try Again!!");
+
+                }
             }
         });
 

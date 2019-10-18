@@ -29,7 +29,7 @@
         android:textSize="11sp" />
 
     <EditText
-        android:id="@+id/password"
+        android:id="@+id/password_SignIn"
         style="@style/Base.Widget.MaterialComponents.AutoCompleteTextView"
         android:layout_width="313dp"
         android:layout_height="wrap_content"
@@ -42,7 +42,7 @@
         android:inputType="textPassword" />
 
     <EditText
-        android:id="@+id/editText4"
+        android:id="@+id/Email_SignIn"
         android:layout_width="312dp"
         android:layout_height="53dp"
         android:layout_alignParentBottom="true"
@@ -99,17 +99,21 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="184dp"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/imageView2"
-        android:layout_alignParentTop="true"
+        android:layout_width="196dp"
+        android:layout_height="29dp"
+        android:layout_above="@+id/Email_SignIn"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="252dp"
-        android:layout_marginEnd="112dp"
-        android:layout_marginRight="112dp"
-        android:layout_marginBottom="36dp"
+        android:layout_marginStart="107dp"
+        android:layout_marginLeft="107dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="107dp"
+        android:layout_marginRight="107dp"
+        android:layout_marginBottom="20dp"
         android:text="Take control of your Money"
         android:textColor="#C2E04A" />
 
@@ -125,6 +129,18 @@
         android:layout_marginBottom="63dp"
         android:text="Not a member?"
         android:textColor="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/Wrong"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="49dp"
+        android:layout_marginLeft="49dp"
+        android:layout_marginBottom="197dp"
+        android:textColor="#FF0000" />
 
 
 </RelativeLayout>

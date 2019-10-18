@@ -7,6 +7,17 @@
     android:background="#10C971"
     tools:context=".Signup">
 
+    <Button
+        android:id="@+id/SignUp_Action"
+        android:layout_width="168dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="74dp"
+        android:background="#C14CD6"
+        android:text="SignUp"
+        app:backgroundTint="#E1A9D64C" />
+
     <com.google.android.material.button.MaterialButton
         android:id="@+id/SignIn"
         style="@style/Widget.MaterialComponents.Button.TextButton"
@@ -51,17 +62,6 @@
         android:ems="10"
         android:hint="  Username"
         android:inputType="text" />
-
-    <Button
-        android:id="@+id/SignUp_Action"
-        android:layout_width="168dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="75dp"
-        android:background="#C14CD6"
-        android:text="SignUp"
-        app:backgroundTint="#E1A9D64C" />
 
     <EditText
         android:id="@+id/password_SignUp"
@@ -109,6 +109,26 @@
         app:srcCompat="@mipmap/logo" />
 
     <TextView
+        android:id="@+id/textView16"
+        android:layout_width="196dp"
+        android:layout_height="29dp"
+        android:layout_above="@+id/Email_SignUp"
+        android:layout_below="@+id/textView13"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="110dp"
+        android:layout_marginLeft="110dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="103dp"
+        android:layout_marginRight="103dp"
+        android:layout_marginBottom="44dp"
+        android:text="Take control of your Money"
+        android:textColor="#C2E04A" />
+
+    <TextView
         android:id="@+id/textView13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -118,21 +138,5 @@
         android:text="Budgety"
         android:textColor="#FFFFFF"
         android:textSize="36sp" />
-
-    <TextView
-        android:id="@+id/textView14"
-        android:layout_width="184dp"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/imageView2"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="252dp"
-        android:layout_marginEnd="109dp"
-        android:layout_marginRight="109dp"
-        android:layout_marginBottom="36dp"
-        android:text="Take control of your Money"
-        android:textColor="#C2E04A" />
 
 </RelativeLayout>
