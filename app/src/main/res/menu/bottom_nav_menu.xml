@@ -22,14 +22,14 @@
         app:showAsAction="ifRoom" />
 
 
-    <item
-        android:id="@+id/action_add"
-        android:enabled="true"
-        android:iconTint="#A6AAB4"
-        android:title=""
-        app:showAsAction="always"
+<!--    <item-->
+<!--        android:id="@+id/action_add"-->
+<!--        android:enabled="true"-->
+<!--        android:iconTint="#A6AAB4"-->
+<!--        android:title=""-->
+<!--        app:showAsAction="always"-->
 
-        />
+<!--        />-->
 
 
     <item
