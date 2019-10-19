@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F9FAFB"
+    tools:context=".activity_goal">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="57dp"
+        android:layout_alignParentBottom="true"
+        android:background="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageButton
+            android:id="@+id/Home_ImageButton"
+            style="@style/Widget.MaterialComponents.MaterialCalendar.HeaderToggleButton"
+            android:layout_width="103dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="3dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="0dp"
+            android:padding="40dp"
+            android:tint="#575454"
+            app:srcCompat="@drawable/round_home_24" />
+
+        <ImageButton
+            android:id="@+id/Setting_ImageButton"
+            android:layout_width="103dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="310dp"
+            android:layout_marginLeft="310dp"
+            android:layout_marginBottom="0dp"
+            android:background="#FFFFFF"
+            android:tint="#575454"
+            app:srcCompat="@drawable/round_tune_24" />
+
+        <ImageButton
+            android:id="@+id/Stat_ImageButton"
+            android:layout_width="103dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="102dp"
+            android:layout_marginRight="102dp"
+            android:layout_marginBottom="-1dp"
+            android:background="#FFFFFF"
+            android:tint="#575454"
+            app:srcCompat="@drawable/round_pie_chart_24" />
+
+        <ImageButton
+            android:id="@+id/Goal_ImageButton"
+            android:layout_width="103dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="104dp"
+            android:layout_marginLeft="104dp"
+            android:layout_marginBottom="0dp"
+            android:background="#FFFFFF"
+            android:tint="#10C971"
+            app:srcCompat="@drawable/round_emoji_events_24" />
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

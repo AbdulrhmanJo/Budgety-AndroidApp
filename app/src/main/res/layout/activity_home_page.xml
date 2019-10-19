@@ -244,20 +244,92 @@
 
 
 
-
-
     <androidx.coordinatorlayout.widget.CoordinatorLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
         android:layout_gravity="bottom">
 
-        <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/bottom_app_bar"
+        <RelativeLayout
+            android:id="@+id/relativeLayout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            app:backgroundTint="@color/cardview_light_background"
-            app:menu="@menu/bottom_nav_menu" />
+            android:layout_height="match_parent"
+            android:background="#FFFFFF">
+
+            <ImageButton
+                android:id="@+id/Home_ImageButton"
+                style="@style/Widget.MaterialComponents.MaterialCalendar.HeaderToggleButton"
+                android:layout_width="103dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="0dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="0dp"
+                android:padding="40dp"
+                android:tint="#10C971"
+                app:srcCompat="@drawable/round_home_24" />
+
+            <ImageButton
+                android:id="@+id/Setting_ImageButton"
+                android:layout_width="103dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="310dp"
+                android:layout_marginLeft="310dp"
+                android:layout_marginBottom="0dp"
+                android:background="#FFFFFF"
+                app:srcCompat="@drawable/round_tune_24" />
+
+            <ImageButton
+                android:id="@+id/Stat_ImageButton"
+                android:layout_width="103dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="101dp"
+                android:layout_marginRight="101dp"
+                android:layout_marginBottom="-1dp"
+                android:background="#FFFFFF"
+                app:srcCompat="@drawable/round_pie_chart_24" />
+
+            <ImageButton
+                android:id="@+id/Goal_ImageButton"
+                android:layout_width="103dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="104dp"
+                android:layout_marginLeft="104dp"
+                android:layout_marginBottom="0dp"
+                android:background="#FFFFFF"
+                app:srcCompat="@drawable/round_emoji_events_24" />
+
+        </RelativeLayout>
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/Add_Action"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            android:clickable="true"
+            app:backgroundTint="#10C971"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/round_add_24" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>

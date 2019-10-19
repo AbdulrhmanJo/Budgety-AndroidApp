@@ -4,13 +4,16 @@ import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
+import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
+import android.view.View;
 import android.view.autofill.AutofillValue;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
@@ -24,10 +27,49 @@ public class Home_page extends AppCompatActivity {
 
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
-    @Override
+
+
+
+    public void OpenSetting(){
+        Intent intent = new Intent(Home_page.this,Activity_Setting.class);
+        startActivity(intent);
+    }
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page);
+
+
+        // TO SETTING
+        ImageButton SettingButton =(ImageButton)findViewById(R.id.Setting_ImageButton);
+        SettingButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Home_page.this,Activity_Setting.class);
+                startActivity(intent);
+            }
+        });
+
+
+        // TO GOAL
+        ImageButton GoalButton =(ImageButton)findViewById(R.id.Goal_ImageButton);
+        GoalButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Home_page.this,activity_goal.class);
+                startActivity(intent);
+            }
+        });
+        // TO STAT
+        ImageButton StatButton =(ImageButton)findViewById(R.id.Stat_ImageButton);
+        StatButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Home_page.this,activity_stat.class);
+                startActivity(intent);
+            }
+        });
+
+
 
         LinearLayout container = (LinearLayout) findViewById(R.id.transaction_container);
 
