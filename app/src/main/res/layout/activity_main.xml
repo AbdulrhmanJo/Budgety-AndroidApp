@@ -8,111 +8,68 @@
     tools:context=".MainActivity">
 
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="136dp"
-        android:layout_marginLeft="131dp"
-        android:layout_marginStart="131dp"
-        android:text="Not a member?"
-        android:textColor="#FFFFFF" />
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/signup"
-        style="@style/Widget.MaterialComponents.Button.TextButton"
-        android:layout_width="wrap_content"
-        android:layout_height="35dp"
-
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginBottom="128dp"
-        android:layout_marginEnd="122dp"
-        android:layout_marginLeft="-9dp"
-        android:layout_marginRight="122dp"
-        android:layout_marginStart="-9dp"
-        android:layout_toEndOf="@+id/textView3"
-        android:layout_toRightOf="@+id/textView3"
-        android:text="SignUp"
-        android:textColor="#E1536138"
-        android:textSize="11sp" />
-
-    <EditText
-        android:id="@+id/password_SignIn"
-        style="@style/Base.Widget.MaterialComponents.AutoCompleteTextView"
-        android:layout_width="313dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="268dp"
-        android:background="#FFFFFF"
-        android:ems="10"
-        android:hint="Password"
-        android:inputType="textPassword" />
-
-    <EditText
-        android:id="@+id/Email_SignIn"
-        android:layout_width="312dp"
-        android:layout_height="53dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="335dp"
-        android:background="#FFFFFF"
-        android:ems="10"
-        android:paddingLeft="10dp"
-        android:hint="Email"
-        android:inputType="textEmailAddress" />
-
     <Button
         android:id="@+id/sing_in"
         android:layout_width="168dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="191dp"
+        android:layout_marginEnd="123dp"
+        android:layout_marginTop="430dp"
         android:background="#C14CD6"
         android:text="Sign In"
         app:backgroundTint="#E1A9D64C" />
 
-    <View
-        android:id="@+id/view"
-        android:layout_width="match_parent"
-        android:layout_height="295dp"
+    <EditText
+        android:id="@+id/password_SignIn"
+        style="@style/Base.Widget.MaterialComponents.AutoCompleteTextView"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="335dp"
+        android:background="#FFFFFF"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        />
 
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="0dp" />
+    <EditText
+        android:id="@+id/Email_SignIn"
+        android:layout_width="350dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="270dp"
+        android:background="#FFFFFF"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:paddingLeft="10dp" />
 
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="match_parent"
         android:layout_height="416dp"
-
-
-        android:layout_alignParentTop="true"
-
-        android:layout_centerVertical="true"
-
-
-        android:layout_marginTop="-108dp"
+        android:layout_marginTop="-107dp"
         app:srcCompat="@mipmap/logo" />
 
     <TextView
-        android:id="@+id/textView7"
-        android:layout_width="184dp"
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/imageView2"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
+        android:layout_marginRight="94dp"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="495dp"
+        android:text="Not a member?"
+        android:textColor="#FFFFFF" />
+
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="19dp"
+        android:layout_below="@+id/textView"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="213dp"
-        android:layout_marginEnd="114dp"
-        android:layout_marginRight="114dp"
-        android:layout_marginBottom="49dp"
+        android:layout_marginBottom="79dp"
+        android:layout_marginTop="7dp"
         android:text="Take control of your Money"
         android:textColor="#C2E04A" />
 
@@ -120,12 +77,12 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="155dp"
         android:text="Budgety"
         android:textColor="#FFFFFF"
-        android:textSize="36sp" />
+        android:textSize="36sp"
+        android:fontFamily="sans-serif-medium"/>
 
     <TextView
         android:id="@+id/textView2"
@@ -140,13 +97,23 @@
         android:id="@+id/Wrong"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentBottom="true"
+        android:layout_marginTop="400dp"
         android:layout_marginStart="48dp"
-        android:layout_marginLeft="48dp"
-        android:layout_marginBottom="245dp"
-        android:textColor="#FF0000" />
+        android:textColor="#FF0000"
+        android:fontFamily="sans-serif-medium"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/signup"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_marginTop="486dp"
+        android:layout_marginLeft="-12dp"
+        android:layout_toRightOf="@+id/textView3"
+        android:text="Sign Up"
+        android:textColor="#E1536138"
+        android:textSize="11sp"
+        />
 
 
 </RelativeLayout>

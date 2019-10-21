@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,329 +7,320 @@
     android:background="#F9FAFB"
     tools:context=".MainActivity">
 
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_vertical"
-        android:orientation="vertical"
-
-        android:paddingTop="15dp">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="8dp"
-                android:tint="#10C971"
-                app:srcCompat="@drawable/round_account_circle_24" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Hello, Rayan"
-                android:layout_gravity="center"
-                />
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:tint="#10C971"
-                app:srcCompat="@drawable/round_notifications_none_24"
-                />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginTop="20dp"
-                android:backgroundTint="#10C971"
-                android:minHeight="200dp"
-                app:cardCornerRadius="10dp"
-                app:cardElevation="5dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    android:paddingTop="10dp">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Balance"
-                        android:textColor="@color/design_default_color_on_secondary"
-                        android:textSize="16dp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="$ 4,500.00"
-                        android:textColor="#fff"
-                        android:textSize="30dp"
-                        android:textStyle="bold" />
-
-                </LinearLayout>
-
-                <com.google.android.material.card.MaterialCardView
-                    android:layout_width="match_parent"
-                    android:layout_height="80dp"
-                    android:layout_marginLeft="30dp"
-                    android:layout_marginRight="30dp"
-                    android:layout_marginTop="99dp"
-                    android:backgroundTint="#F9FAFB"
-                    android:minHeight="200dp"
-                    app:cardCornerRadius="10dp">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal">
-
-                        <LinearLayout
-                            android:layout_width="103dp"
-                            android:layout_height="match_parent"
-                            android:orientation="vertical">
-
-                            <ImageView
-                                android:layout_width="match_parent"
-                                android:layout_height="40dp"
-                                android:tint="#10C971"
-                                app:srcCompat="@drawable/round_keyboard_arrow_up_24" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center_horizontal"
-                                android:layout_marginTop="-12dp"
-                                android:text="Income"
-                                android:textColor="#000"
-                                android:textStyle="bold" />
-
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center_horizontal"
-                                android:text="$ 1,200.00"
-                                android:textColor="#10C971"
-                                android:textSize="15dp"
-                                android:textStyle="bold" />
-                        </LinearLayout>
-
-                        <TextView
-                            android:layout_width="1dp"
-                            android:layout_height="60dp"
-                            android:layout_gravity="center"
-                            android:background="#c0c0c0" />
-
-                        <LinearLayout
-                            android:layout_width="103dp"
-                            android:layout_height="match_parent"
-                            android:orientation="vertical">
-
-                            <ImageView
-                                android:layout_width="match_parent"
-                                android:layout_height="30dp"
-                                android:layout_marginTop="6dp"
-                                android:tint="#000000"
-                                app:srcCompat="@drawable/round_trending_up_24" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center_horizontal"
-                                android:layout_marginTop="-8dp"
-                                android:text="Saving"
-                                android:textColor="#000"
-                                android:textStyle="bold" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center_horizontal"
-                                android:text="$ 1,000.00"
-                                android:textColor="#000000"
-                                android:textSize="15dp"
-                                android:textStyle="bold" />
-                        </LinearLayout>
-
-                        <TextView
-                            android:layout_width="1dp"
-                            android:layout_height="60dp"
-                            android:layout_gravity="center"
-                            android:background="#c0c0c0" />
-
-                        <LinearLayout
-                            android:layout_width="103dp"
-                            android:layout_height="match_parent"
-                            android:orientation="vertical">
-
-                            <ImageView
-                                android:layout_width="match_parent"
-                                android:layout_height="40dp"
-                                android:tint="#C91010"
-                                app:srcCompat="@drawable/round_keyboard_arrow_down_24" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center_horizontal"
-                                android:layout_marginTop="-12dp"
-                                android:text="Expenses"
-                                android:textColor="#000"
-                                android:textStyle="bold" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center_horizontal"
-                                android:text="$ 570.00"
-                                android:textColor="#C91010"
-                                android:textSize="15dp"
-                                android:textStyle="bold" />
-                        </LinearLayout>
-
-                    </LinearLayout>
-                </com.google.android.material.card.MaterialCardView>
-
-            </com.google.android.material.card.MaterialCardView>
-
-        </LinearLayout>
-
-        <ScrollView
+        <FrameLayout
+            android:id="@+id/fragment_container"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-
+            android:orientation="vertical"
+            android:layout_above="@+id/bottom_navigation"
             >
 
-            <LinearLayout
-                android:id="@+id/transaction_container"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:paddingLeft="25dp"
-                android:paddingRight="25dp"
-                android:layout_gravity="center_horizontal"
-                >
+        </FrameLayout>
+
+
+<!--    <ImageView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginRight="8dp"-->
+<!--        android:tint="#10C971"-->
+<!--        app:srcCompat="@drawable/round_account_circle_24" />-->
+
+<!--    <ImageView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:tint="#10C971"-->
+<!--        app:srcCompat="@drawable/round_notifications_none_24" />-->
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="250dp"-->
+<!--        android:orientation="vertical">-->
+
+<!--        <com.google.android.material.card.MaterialCardView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="150dp"-->
+<!--            android:backgroundTint="#10C971"-->
+<!--            app:cardCornerRadius="0dp">-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="100dp"-->
+<!--                android:gravity="center"-->
+<!--                android:orientation="vertical">-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity="center_horizontal"-->
+<!--                    android:fontFamily="sans-serif-medium"-->
+<!--                    android:text="Current Balance"-->
+<!--                    android:textColor="@color/design_default_color_on_secondary"-->
+<!--                    android:textSize="12dp" />-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity="center_horizontal"-->
+<!--                    android:fontFamily="s"-->
+<!--                    android:text="$ 4,500.00"-->
+<!--                    android:textColor="#fff"-->
+<!--                    android:textSize="40dp"-->
+<!--                    android:textStyle="bold" />-->
+
+
+<!--            </LinearLayout>-->
+
+
+<!--        </com.google.android.material.card.MaterialCardView>-->
+
+<!--        <com.google.android.material.card.MaterialCardView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="95dp"-->
+<!--            android:layout_gravity="center_horizontal"-->
+<!--            android:layout_marginTop="-50dp"-->
+
+<!--            android:backgroundTint="#fff"-->
+<!--            app:cardCornerRadius="12dp"-->
+<!--            app:cardElevation="3dp">-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:orientation="horizontal">-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="110dp"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:orientation="vertical">-->
+
+<!--                    <ImageView-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="40dp"-->
+<!--                        android:layout_gravity="top"-->
+<!--                        android:layout_marginTop="5dp"-->
+<!--                        android:tint="#10C971"-->
+<!--                        app:srcCompat="@drawable/round_keyboard_arrow_up_24" />-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_gravity="center"-->
+<!--                        android:layout_marginTop="-10dp"-->
+<!--                        android:text="Income"-->
+<!--                        android:textColor="#000"-->
+<!--                        android:textStyle="bold" />-->
+
+
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_gravity="center_horizontal"-->
+<!--                        android:layout_marginTop="5dp"-->
+<!--                        android:text="$ 1,200.00"-->
+<!--                        android:textColor="#10C971"-->
+<!--                        android:textSize="15dp"-->
+<!--                        android:textStyle="bold" />-->
+<!--                </LinearLayout>-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="110dp"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:orientation="vertical">-->
+
+<!--                    <ImageView-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="30dp"-->
+<!--                        android:layout_marginTop="10dp"-->
+<!--                        android:tint="#000000"-->
+<!--                        app:srcCompat="@drawable/round_trending_up_24" />-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_gravity="center_horizontal"-->
+<!--                        android:layout_marginTop="-5dp"-->
+<!--                        android:text="Saving"-->
+<!--                        android:textColor="#000"-->
+<!--                        android:textStyle="bold" />-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_gravity="center_horizontal"-->
+<!--                        android:layout_marginTop="3dp"-->
+<!--                        android:text="$ 1,000.00"-->
+<!--                        android:textColor="#000000"-->
+<!--                        android:textSize="15dp"-->
+<!--                        android:textStyle="bold" />-->
+<!--                </LinearLayout>-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="110dp"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:orientation="vertical">-->
+
+<!--                    <ImageView-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="40dp"-->
+<!--                        android:layout_marginTop="5dp"-->
+<!--                        android:tint="#C91010"-->
+<!--                        app:srcCompat="@drawable/round_keyboard_arrow_down_24" />-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_gravity="center_horizontal"-->
+<!--                        android:layout_marginTop="-10dp"-->
+<!--                        android:text="Expenses"-->
+<!--                        android:textColor="#000"-->
+<!--                        android:textStyle="bold" />-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_gravity="center_horizontal"-->
+<!--                        android:layout_marginTop="3dp"-->
+<!--                        android:text="$ 570.00"-->
+<!--                        android:textColor="#C91010"-->
+<!--                        android:textSize="15dp"-->
+<!--                        android:textStyle="bold" />-->
+<!--                </LinearLayout>-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="1dp"-->
+<!--                    android:layout_height="60dp"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:background="#c0c0c0" />-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="1dp"-->
+<!--                    android:layout_height="60dp"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:background="#c0c0c0" />-->
+
+<!--            </LinearLayout>-->
+<!--        </com.google.android.material.card.MaterialCardView>-->
+
+<!--    </LinearLayout>-->
+
+<!--    <RelativeLayout-->
+<!--        android:id="@+id/relativeLayout"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:background="#FFFFFF">-->
+
+<!--        <ImageButton-->
+<!--            android:id="@+id/Home_ImageButton"-->
+<!--            style="@style/Widget.MaterialComponents.MaterialCalendar.HeaderToggleButton"-->
+<!--            android:layout_width="103dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_alignParentBottom="true"-->
+<!--            android:layout_alignParentLeft="true"-->
+<!--            android:layout_alignParentStart="true"-->
+<!--            android:layout_alignParentTop="true"-->
+<!--            android:layout_marginBottom="0dp"-->
+<!--            android:layout_marginLeft="0dp"-->
+<!--            android:layout_marginStart="0dp"-->
+<!--            android:layout_marginTop="0dp"-->
+<!--            android:padding="40dp"-->
+<!--            android:tint="#10C971"-->
+<!--            app:srcCompat="@drawable/round_home_24" />-->
+
+<!--        <ImageButton-->
+<!--            android:id="@+id/Setting_ImageButton"-->
+<!--            android:layout_width="103dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_alignParentBottom="true"-->
+<!--            android:layout_alignParentLeft="true"-->
+<!--            android:layout_alignParentStart="true"-->
+<!--            android:layout_marginBottom="0dp"-->
+<!--            android:layout_marginLeft="310dp"-->
+<!--            android:layout_marginStart="310dp"-->
+<!--            android:background="#FFFFFF"-->
+<!--            app:srcCompat="@drawable/round_tune_24" />-->
+
+<!--        <ImageButton-->
+<!--            android:id="@+id/Stat_ImageButton"-->
+<!--            android:layout_width="103dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_alignParentBottom="true"-->
+<!--            android:layout_alignParentEnd="true"-->
+<!--            android:layout_alignParentRight="true"-->
+<!--            android:layout_marginBottom="-1dp"-->
+<!--            android:layout_marginEnd="101dp"-->
+<!--            android:layout_marginRight="101dp"-->
+<!--            android:background="#FFFFFF"-->
+<!--            app:srcCompat="@drawable/round_pie_chart_24" />-->
+
+<!--        <ImageButton-->
+<!--            android:id="@+id/Goal_ImageButton"-->
+<!--            android:layout_width="103dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_alignParentBottom="true"-->
+<!--            android:layout_alignParentLeft="true"-->
+<!--            android:layout_alignParentStart="true"-->
+<!--            android:layout_marginBottom="0dp"-->
+<!--            android:layout_marginLeft="104dp"-->
+<!--            android:layout_marginStart="104dp"-->
+<!--            android:background="#FFFFFF"-->
+<!--            app:srcCompat="@drawable/round_emoji_events_24" />-->
+
+<!--    </RelativeLayout>-->
+
+<!--    <ScrollView-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+
+<!--    >-->
+
+<!--    <LinearLayout-->
+<!--        android:id="@+id/transaction_container"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_gravity="center_horizontal"-->
+<!--        android:orientation="vertical"-->
+<!--        android:paddingLeft="25dp"-->
+<!--        android:paddingRight="25dp">-->
+
+
+<!--    </LinearLayout>-->
+<!--</ScrollView>-->
 
 
 
 
+<!--    <androidx.appcompat.widget.Toolbar-->
+<!--        android:id="@+id/toolbar"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:background="#10C971"-->
+<!--        android:minHeight="?attr/actionBarSize"-->
+<!--        android:textDirection="firstStrong"-->
+<!--        app:menu="@menu/top_nav_menu"-->
+<!--        app:navigationIcon="@drawable/round_account_circle_24">-->
 
-            </LinearLayout>
-        </ScrollView>
+
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginLeft="115dp"-->
+<!--            android:fontFamily="sans-serif"-->
+<!--            android:text="Budgety" />-->
 
 
-    </LinearLayout>
+<!--    </androidx.appcompat.widget.Toolbar>-->
 
-
-
-
-    <androidx.coordinatorlayout.widget.CoordinatorLayout
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"
-        android:layout_height="56dp"
-        android:layout_gravity="bottom">
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#fff"
+        app:itemTextColor="#000"
+        app:menu="@menu/bottom_nav_menu">
 
-        <RelativeLayout
-            android:id="@+id/relativeLayout"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#FFFFFF">
 
-            <ImageButton
-                android:id="@+id/Home_ImageButton"
-                style="@style/Widget.MaterialComponents.MaterialCalendar.HeaderToggleButton"
-                android:layout_width="103dp"
-                android:layout_height="match_parent"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginStart="0dp"
-                android:layout_marginLeft="0dp"
-                android:layout_marginTop="0dp"
-                android:layout_marginBottom="0dp"
-                android:padding="40dp"
-                android:tint="#10C971"
-                app:srcCompat="@drawable/round_home_24" />
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
 
-            <ImageButton
-                android:id="@+id/Setting_ImageButton"
-                android:layout_width="103dp"
-                android:layout_height="match_parent"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginStart="310dp"
-                android:layout_marginLeft="310dp"
-                android:layout_marginBottom="0dp"
-                android:background="#FFFFFF"
-                app:srcCompat="@drawable/round_tune_24" />
 
-            <ImageButton
-                android:id="@+id/Stat_ImageButton"
-                android:layout_width="103dp"
-                android:layout_height="match_parent"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginEnd="101dp"
-                android:layout_marginRight="101dp"
-                android:layout_marginBottom="-1dp"
-                android:background="#FFFFFF"
-                app:srcCompat="@drawable/round_pie_chart_24" />
-
-            <ImageButton
-                android:id="@+id/Goal_ImageButton"
-                android:layout_width="103dp"
-                android:layout_height="match_parent"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginStart="104dp"
-                android:layout_marginLeft="104dp"
-                android:layout_marginBottom="0dp"
-                android:background="#FFFFFF"
-                app:srcCompat="@drawable/round_emoji_events_24" />
-
-        </RelativeLayout>
-    </androidx.coordinatorlayout.widget.CoordinatorLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/Add_Action"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="32dp"
-            android:clickable="true"
-            app:backgroundTint="#10C971"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toStartOf="parent"
-            app:srcCompat="@drawable/round_add_24" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-</FrameLayout>
+</RelativeLayout>
