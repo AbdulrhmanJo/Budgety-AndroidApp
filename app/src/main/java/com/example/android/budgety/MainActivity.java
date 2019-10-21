@@ -16,12 +16,12 @@ public class MainActivity extends AppCompatActivity {
     public void openHomePage() {
         Intent intent = new Intent(this,Home_page.class);
         startActivity(intent);
-}
+    }
 
     public void OpenSignUp(){
-    Intent intent = new Intent(this,Signup.class);
-    startActivity(intent);
-}
+        Intent intent = new Intent(this,Signup.class);
+        startActivity(intent);
+    }
 
 
 
@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
 
 
                 if(Str_Email.equalsIgnoreCase("rayan")&&Str_Password.equals("123")){
-                openHomePage();
+                    openHomePage();
 
                 }else{
                     error.setText("Wrong Entery ..Please try Again!!");
