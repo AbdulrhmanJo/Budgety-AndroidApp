@@ -22,7 +22,10 @@ public class Signup extends AppCompatActivity {
         startActivity(intent);
     }
 
-
+    public void openSignIn() {
+        Intent intent = new Intent(this,MainActivity.class);
+        startActivity(intent);
+    }
 
 
 
@@ -34,7 +37,7 @@ public class Signup extends AppCompatActivity {
         setContentView(R.layout.activity_signup);
 
 
-
+        Button signIn = (Button) findViewById(R.id.signIn);
         Button SignUp_Actions = (Button) findViewById(R.id.SignUp_Action);
 
 
@@ -46,6 +49,14 @@ public class Signup extends AppCompatActivity {
             openHomePage();
         }
     });
+
+
+        signIn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openSignIn();
+            }
+        });
 
 
     }
