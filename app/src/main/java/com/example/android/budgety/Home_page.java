@@ -35,10 +35,11 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.bottomsheet.BottomSheetBehavior;
 import com.google.android.material.card.MaterialCardView;
 
 public class Home_page extends AppCompatActivity {
-
+    BottomSheetBehavior bottomSheetBehavior;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page);
@@ -48,6 +49,9 @@ public class Home_page extends AppCompatActivity {
 
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                 new home()).commit();
+
+
+
 
 
         //I added this if statement to keep the selected fragment when rotating the device
@@ -124,11 +128,6 @@ public class Home_page extends AppCompatActivity {
 //        });
 
 
-
-
-
-
-
     }
 
     private BottomNavigationView.OnNavigationItemSelectedListener navListener =
@@ -147,19 +146,20 @@ public class Home_page extends AppCompatActivity {
                             break;
 
                         case R.id.action_add:
-                            selectedFragment = new addPage();
+                            new BottomSheetListDialogFragment().show(getSupportFragmentManager(),"");
                             break;
 
                     }
 
-                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                            selectedFragment).commit();
+                    if(selectedFragment != null){
+                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                                selectedFragment).commit();
+                    }
+
 
                     return true;
                 }
             };
-
-
 
 
 }
