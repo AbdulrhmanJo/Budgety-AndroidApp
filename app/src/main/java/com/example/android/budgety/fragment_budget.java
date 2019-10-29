@@ -3,10 +3,13 @@ package com.example.android.budgety;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageView;
 
 
 public class fragment_budget extends Fragment {
@@ -35,10 +38,19 @@ public class fragment_budget extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
 
+        View view =  inflater.inflate(R.layout.fragment_fragment_budget, container, false);
 
+        Button icon =  (Button) view.findViewById(R.id.add_budget);
 
+        icon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
-        return inflater.inflate(R.layout.fragment_fragment_budget, container, false);
+                new addBudget().show(getFragmentManager(),"");
+            }
+        });
+
+        return view;
     }
 
 

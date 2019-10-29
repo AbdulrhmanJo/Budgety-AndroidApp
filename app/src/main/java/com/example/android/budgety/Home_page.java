@@ -121,7 +121,7 @@ public class Home_page extends AppCompatActivity {
                         case R.id.action_add:
                             new BottomSheetListDialogFragment().show(getSupportFragmentManager(),"");
                             break;
-                        case R.id.action_goal:
+                        case R.id.action_budget:
 
                             selectedFragment = new fragment_budget();
                             break;
