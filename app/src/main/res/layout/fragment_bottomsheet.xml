@@ -28,40 +28,42 @@ android:background="@drawable/sheet_stayle"
         />
 
     <com.google.android.material.chip.ChipGroup
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         app:chipSpacingHorizontal="25dp"
         app:singleSelection="true"
-        android:paddingLeft="20dp"
-        android:paddingRight="20dp"
+        android:layout_gravity="center"
         >
 
         <com.google.android.material.chip.Chip
             style="@style/Widget.MaterialComponents.Chip.Choice"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
             android:text="Income"
             app:chipCornerRadius="5dp"
             android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
-
+            android:textAlignment="center"
             />
         <com.google.android.material.chip.Chip
             style="@style/Widget.MaterialComponents.Chip.Choice"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
             android:text="Saving"
             app:chipCornerRadius="5dp"
             android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+            android:textAlignment="center"
 
             />
         <com.google.android.material.chip.Chip
             style="@style/Widget.MaterialComponents.Chip.Choice"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
             android:text="Expense"
             app:chipCornerRadius="5dp"
             android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+            android:textAlignment="center"
+
             />
     </com.google.android.material.chip.ChipGroup>
 
