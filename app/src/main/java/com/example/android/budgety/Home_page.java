@@ -1,42 +1,15 @@
 package com.example.android.budgety;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
 
-import android.annotation.SuppressLint;
-import android.content.Intent;
-import android.content.res.ColorStateList;
-import android.graphics.Color;
-import android.graphics.drawable.Drawable;
-import android.os.Build;
 import android.os.Bundle;
-import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.view.autofill.AutofillValue;
-import android.widget.Button;
-import android.widget.GridLayout;
-import android.widget.ImageButton;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
-import android.widget.ScrollView;
-import android.widget.TextView;
-import android.widget.LinearLayout.LayoutParams;
-import android.widget.Toast;
 
-import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
-import androidx.navigation.ui.AppBarConfiguration;
-import androidx.navigation.ui.NavigationUI;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
-import com.google.android.material.card.MaterialCardView;
 
 public class Home_page extends AppCompatActivity {
     BottomSheetBehavior bottomSheetBehavior;
@@ -148,6 +121,14 @@ public class Home_page extends AppCompatActivity {
                         case R.id.action_add:
                             new BottomSheetListDialogFragment().show(getSupportFragmentManager(),"");
                             break;
+                        case R.id.action_goal:
+
+                            selectedFragment = new fragment_budget();
+                            break;
+                        case R.id.action_stat:
+                            selectedFragment = new fragment_Statistics();
+                            break;
+
 
                     }
 
