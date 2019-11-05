@@ -93,23 +93,23 @@ public class setting extends Fragment{
                     if(finalI==0){
                         Information newFragment= new Information();
                         swapFragment(newFragment);
-                        System.out.println("Information");
+                       // System.out.println("Information");
                     }else if(finalI==1){
-                        System.out.println("Notifecation");
+                      //  System.out.println("Notifecation");
                         notification newfragment =new notification();
                         swapFragment(newfragment);
                     }else if(finalI==2){
-                        System.out.println("Language");
+                        //System.out.println("Language");
                     }else if(finalI==3){
                         Account newFragment = new Account();
                         swapFragment(newFragment);
-                        System.out.println("Account");
+                       // System.out.println("Account");
                     }else if (finalI==4){
-                        System.out.println("Currency");
+                     //   System.out.println("Currency");
                         Currency newFragment=new Currency();
                         swapFragment(newFragment);
                     }else if(finalI==5){
-                        System.out.println("Privacy");
+                       // System.out.println("Privacy");
                     }
 
                     cardView.setCardBackgroundColor(R.color.design_default_color_primary_dark);
