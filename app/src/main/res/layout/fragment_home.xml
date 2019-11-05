@@ -7,6 +7,10 @@
     tools:context=".home">
 
 
+
+
+
+
     <LinearLayout
         android:id="@+id/container"
         android:layout_width="match_parent"
@@ -185,14 +189,112 @@
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
 
+
+
+
     </LinearLayout>
 
+    <HorizontalScrollView
+        android:id="@+id/month_navigation_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/container"
+        >
+        <com.google.android.material.chip.ChipGroup
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:singleLine="true"
+            android:paddingLeft="30dp"
+            android:paddingRight="32dp"
+            android:paddingTop="5dp"
+            app:singleSelection="true"
+
+            >
+
+            <com.google.android.material.chip.Chip
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="January"
+                />
+
+
+            <com.google.android.material.chip.Chip
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="February"/>
+
+            <com.google.android.material.chip.Chip
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="March"/>
+
+            <com.google.android.material.chip.Chip
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="April"/>
+
+            <com.google.android.material.chip.Chip
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="May"/>
+
+            <com.google.android.material.chip.Chip
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="June"/>
+
+            <com.google.android.material.chip.Chip
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="July"/>
+
+            <com.google.android.material.chip.Chip
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="August"/>
+
+            <com.google.android.material.chip.Chip
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="September"/>
+
+            <com.google.android.material.chip.Chip
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="October"/>
+
+
+            <com.google.android.material.chip.Chip
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="November"/>
+
+            <com.google.android.material.chip.Chip
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="December"/>
+
+        </com.google.android.material.chip.ChipGroup>
+    </HorizontalScrollView>
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
 
-        android:layout_below="@id/container">
+        android:layout_below="@id/month_navigation_bar">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -953,6 +1055,8 @@
 
 
     </androidx.appcompat.widget.Toolbar>
+
+
 
 
 </RelativeLayout>
