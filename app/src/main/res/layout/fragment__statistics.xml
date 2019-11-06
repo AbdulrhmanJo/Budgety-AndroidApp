@@ -1,14 +1,109 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".fragment_Statistics">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="match_parent">
 
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="#10C971"
+            android:minHeight="?attr/actionBarSize"
+            android:textDirection="firstStrong"
+            app:menu="@menu/top_nav_menu"
+            app:navigationIcon="@drawable/round_account_circle_24">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="sans-serif-medium"
+                android:text="Budgety" />
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="56dp">
+
+            <LinearLayout
+                android:id="@+id/container"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_below="@+id/toolbar"
+                android:backgroundTint="#10C971"
+                android:orientation="vertical">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="#10C971"
+                    app:cardCornerRadius="0dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/textView4"
+                            android:layout_width="216dp"
+                            android:layout_height="64dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginStart="97dp"
+                            android:layout_marginTop="30dp"
+                            android:layout_marginEnd="97dp"
+                            android:text="Statistics"
+                            android:textAlignment="center"
+                            android:textColor="#FFFFFF"
+                            android:textSize="40dp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="wrap_content"
+            android:layout_height="265dp"
+            android:layout_alignTop="@+id/toolbar2"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="center"
+            android:layout_marginStart="35dp"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="238dp"
+            android:layout_marginEnd="35dp"
+            android:layout_marginRight="35dp"
+            android:backgroundTint="#fff"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="3dp">
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingTop="15dp"
+                android:text="November"
+                android:textSize="18sp" />
+        </com.google.android.material.card.MaterialCardView>
+
+
+    </RelativeLayout>
 </FrameLayout>

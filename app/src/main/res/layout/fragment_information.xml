@@ -1,14 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Information">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:orientation="vertical">
 
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="#10C971"
+            android:minHeight="?attr/actionBarSize"
+            android:textDirection="firstStrong">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="sans-serif-medium"
+                android:text="Information" />
+        </androidx.appcompat.widget.Toolbar>
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="match_parent"
+            android:layout_height="46dp" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:text="Budgety"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="36sp"
+            android:textStyle="bold" />
+
+        <View
+            android:id="@+id/view3"
+            android:layout_width="match_parent"
+            android:layout_height="18dp" />
+
+        <TextView
+            android:id="@+id/textView19"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:text=" Budgety  is a an applecation that designed to help you to controll your spending , keep track of your of your incoming resources . "
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textView20"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:text=" Budgety was designed and developed By Abdulrahman Aljohani and Rayan taj for Dr.Faris Katib"
+            android:textSize="18sp" />
+
+    </LinearLayout>
 </FrameLayout>

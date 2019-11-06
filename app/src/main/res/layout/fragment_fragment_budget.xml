@@ -37,7 +37,7 @@
             android:layout_height="wrap_content"
 
             android:layout_marginTop="56dp"
-          >
+            >
 
             <LinearLayout
                 android:id="@+id/container"
@@ -73,11 +73,33 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:text="$ 18,300.00"
+                            android:text="$ 25,400.00"
                             android:textColor="#fff"
                             android:textSize="40dp"
                             android:textStyle="bold" />
-                        
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <Button
+                                android:id="@+id/add_budget"
+                                android:layout_width="205dp"
+                                android:layout_height="37dp"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginStart="103dp"
+                                android:layout_marginTop="12dp"
+                                android:layout_marginEnd="103dp"
+                                android:layout_marginBottom="16dp"
+                                android:backgroundTint="@color/design_default_color_background"
+                                android:text="new"
+                                android:textColor="#10C971"
+                                android:textSize="12dp" />
+                        </RelativeLayout>
+
                     </LinearLayout>
 
 
@@ -88,108 +110,77 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-               android:layout_below="@id/container"
-              >
-                
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:paddingTop="20dp"
-                    android:paddingLeft="40dp"
-                    android:paddingRight="40dp"
-                    android:paddingBottom="20dp"
-
-                    android:id="@+id/container1">
-                    
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Budgets"
-                        android:fontFamily="sans-serif-medium"
-                        android:layout_weight="1"
-                        android:textSize="14dp"
-                        />
-                    
-                    <Button
-                        android:id="@+id/add_budget"
-                        android:layout_width="70dp"
-                        android:layout_height="40dp"
-                        android:text="new"
-                        android:textSize="12dp"
-                        />
-                </LinearLayout>
+                android:layout_below="@id/container"
+                >
 
                 <ScrollView
+                    android:id="@+id/ScrollView_Budget"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_below="@id/container1"
-                    >
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical" >
+                        android:orientation="vertical">
 
                         <com.google.android.material.card.MaterialCardView
-                            android:layout_width="350dp"
-                            android:layout_height="match_parent"
-                            android:layout_marginStart="13dp"
-                            android:layout_marginLeft="13dp"
-                            android:layout_gravity="center_horizontal"
-                            android:layout_marginTop="5dp"
-                            android:layout_marginEnd="13dp"
-                            android:layout_marginRight="13dp"
-                            app:cardCornerRadius="10dp"
-                            app:cardElevation="5dp"
-                            >
+                            android:layout_width="311dp"
+                            android:layout_height="109dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginTop="40dp"
+                            android:layout_marginRight="25dp"
+                            android:layout_marginBottom="6dp"
+                            android:backgroundTint="#fff"
+                            app:cardCornerRadius="12dp"
+                            app:cardElevation="3dp">
 
                             <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
+                                android:layout_width="312dp"
+                                android:layout_height="105dp"
                                 android:orientation="vertical"
-                                android:padding="20dp"
 
-                                >
-
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp">
 
                                 <TextView
-                                    android:id="@+id/textView8"
-                                    android:layout_width="match_parent"
+                                    android:id="@+id/Budget_Name1"
+                                    android:layout_width="290dp"
                                     android:layout_height="29dp"
-                                    android:text="Budget Name"
                                     android:gravity="center_vertical"
-                                    android:textSize="12dp"
-                                    />
+                                    android:text="Summer Vication"
+                                    android:textSize="12dp" />
 
                                 <LinearLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="horizontal"
+                                    android:layout_width="292dp"
+                                    android:layout_height="41dp"
+                                    android:layout_marginBottom="10dp"
 
-                                    android:layout_marginBottom="10dp">
+                                    android:orientation="horizontal">
 
                                     <TextView
-                                        android:id="@+id/textView11"
-                                        android:layout_width="wrap_content"
+                                        android:id="@+id/CurrentBalance_Budget1"
+                                        android:layout_width="174dp"
                                         android:layout_height="wrap_content"
                                         android:layout_weight="1"
-                                        android:text="$ 4,000.00"
-                                        android:textColor="#D2242020"
                                         android:fontFamily="sans-serif-medium"
+                                        android:text="$ 3000.00"
+                                        android:textAlignment="viewStart"
+                                        android:textColor="#D2242020"
                                         android:textSize="22sp" />
 
                                     <TextView
-                                        android:id="@+id/textView10"
+                                        android:id="@+id/BugetGoal1"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text="$5,000.00"
+                                        android:text="$10,00.00"
                                         android:textAlignment="center" />
                                 </LinearLayout>
 
                                 <SeekBar
-                                    android:id="@+id/seekBar5"
-                                    android:layout_width="match_parent"
+                                    android:id="@+id/seekBar_Budget1"
+                                    android:layout_width="292dp"
                                     android:layout_height="wrap_content"
                                     android:backgroundTint="#10C971"
                                     android:progressTint="#10C971"
@@ -199,202 +190,66 @@
 
                             </LinearLayout>
                         </com.google.android.material.card.MaterialCardView>
+
+
+
                         <com.google.android.material.card.MaterialCardView
-                            android:layout_width="350dp"
-                            android:layout_height="match_parent"
-                            android:layout_marginStart="13dp"
-                            android:layout_marginLeft="13dp"
-                            android:layout_gravity="center_horizontal"
-                            android:layout_marginTop="30dp"
-                            android:layout_marginEnd="13dp"
-                            android:layout_marginRight="13dp"
-                            app:cardCornerRadius="10dp"
-                            app:cardElevation="5dp"
-                            >
+                            android:layout_width="311dp"
+                            android:layout_height="109dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginTop="40dp"
+                            android:layout_marginRight="25dp"
+                            android:layout_marginBottom="6dp"
+                            android:backgroundTint="#fff"
+                            app:cardCornerRadius="12dp"
+                            app:cardElevation="3dp">
 
                             <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
+                                android:layout_width="312dp"
+                                android:layout_height="105dp"
                                 android:orientation="vertical"
-                                android:padding="20dp"
 
-                                >
-
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp">
 
                                 <TextView
-                                    android:id="@+id/textView8"
-                                    android:layout_width="match_parent"
+                                    android:id="@+id/Budget_Name2"
+                                    android:layout_width="290dp"
                                     android:layout_height="29dp"
-                                    android:text="Budget Name"
                                     android:gravity="center_vertical"
-                                    android:textSize="12dp"
-                                    />
+                                    android:text="New House"
+                                    android:textSize="12dp" />
 
                                 <LinearLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="horizontal"
+                                    android:layout_width="292dp"
+                                    android:layout_height="41dp"
+                                    android:layout_marginBottom="10dp"
 
-                                    android:layout_marginBottom="10dp">
+                                    android:orientation="horizontal">
 
                                     <TextView
-                                        android:id="@+id/textView11"
-                                        android:layout_width="wrap_content"
+                                        android:id="@+id/CurrentBalance_Budget2"
+                                        android:layout_width="174dp"
                                         android:layout_height="wrap_content"
                                         android:layout_weight="1"
-                                        android:text="$ 5,500.00"
-                                        android:textColor="#D2242020"
                                         android:fontFamily="sans-serif-medium"
-                                        android:textSize="22sp" />
-
-                                    <TextView
-                                        android:id="@+id/textView10"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:text="$9,000.00"
-                                        android:textAlignment="center" />
-                                </LinearLayout>
-
-                                <SeekBar
-                                    android:id="@+id/seekBar5"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:backgroundTint="#10C971"
-                                    android:progressTint="#10C971"
-                                    android:thumbTint="#10C971"
-
-                                    />
-
-                            </LinearLayout>
-                        </com.google.android.material.card.MaterialCardView>
-                        <com.google.android.material.card.MaterialCardView
-                            android:layout_width="350dp"
-                            android:layout_height="match_parent"
-                            android:layout_marginStart="13dp"
-                            android:layout_marginLeft="13dp"
-                            android:layout_gravity="center_horizontal"
-                            android:layout_marginTop="30dp"
-                            android:layout_marginEnd="13dp"
-                            android:layout_marginRight="13dp"
-                            app:cardCornerRadius="10dp"
-                            app:cardElevation="5dp"
-                            >
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:orientation="vertical"
-                                android:padding="20dp"
-
-                                >
-
-
-                                <TextView
-                                    android:id="@+id/textView8"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="29dp"
-                                    android:text="Budget Name"
-                                    android:gravity="center_vertical"
-                                    android:textSize="12dp"
-                                    />
-
-                                <LinearLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="horizontal"
-
-                                    android:layout_marginBottom="10dp">
-
-                                    <TextView
-                                        android:id="@+id/textView11"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_weight="1"
-                                        android:text="$ 10,000.00"
-                                        android:textColor="#D2242020"
-                                        android:fontFamily="sans-serif-medium"
-                                        android:textSize="22sp" />
-
-                                    <TextView
-                                        android:id="@+id/textView10"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:text="$15,000.00"
-                                        android:textAlignment="center" />
-                                </LinearLayout>
-
-                                <SeekBar
-                                    android:id="@+id/seekBar5"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:backgroundTint="#10C971"
-                                    android:progressTint="#10C971"
-                                    android:thumbTint="#10C971"
-
-                                    />
-
-                            </LinearLayout>
-                        </com.google.android.material.card.MaterialCardView>
-                        <com.google.android.material.card.MaterialCardView
-                            android:layout_width="350dp"
-                            android:layout_height="match_parent"
-                            android:layout_marginStart="13dp"
-                            android:layout_marginLeft="13dp"
-                            android:layout_gravity="center_horizontal"
-                            android:layout_marginTop="30dp"
-                            android:layout_marginEnd="13dp"
-                            android:layout_marginRight="13dp"
-                            app:cardCornerRadius="10dp"
-                            app:cardElevation="5dp"
-                            android:layout_marginBottom="100dp"
-                            >
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:orientation="vertical"
-                                android:padding="20dp"
-
-                                >
-
-
-                                <TextView
-                                    android:id="@+id/textView8"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="29dp"
-                                    android:text="Budget Name"
-                                    android:gravity="center_vertical"
-                                    android:textSize="12dp"
-                                    />
-
-                                <LinearLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="horizontal"
-
-                                    android:layout_marginBottom="10dp">
-
-                                    <TextView
-                                        android:id="@+id/textView11"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_weight="1"
                                         android:text="$ 50,000.00"
+                                        android:textAlignment="viewStart"
                                         android:textColor="#D2242020"
-                                        android:fontFamily="sans-serif-medium"
                                         android:textSize="22sp" />
 
                                     <TextView
-                                        android:id="@+id/textView10"
+                                        android:id="@+id/BugetGoal2"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text="$100,000.00"
+                                        android:text="$1000,000.00"
                                         android:textAlignment="center" />
                                 </LinearLayout>
 
                                 <SeekBar
-                                    android:id="@+id/seekBar5"
-                                    android:layout_width="match_parent"
+                                    android:id="@+id/seekBar_Budget2"
+                                    android:layout_width="292dp"
                                     android:layout_height="wrap_content"
                                     android:backgroundTint="#10C971"
                                     android:progressTint="#10C971"
@@ -407,6 +262,141 @@
 
 
 
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="311dp"
+                            android:layout_height="109dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginTop="40dp"
+                            android:layout_marginRight="25dp"
+                            android:layout_marginBottom="6dp"
+                            android:backgroundTint="#fff"
+                            app:cardCornerRadius="12dp"
+                            app:cardElevation="3dp">
+
+                            <LinearLayout
+                                android:layout_width="312dp"
+                                android:layout_height="105dp"
+                                android:orientation="vertical"
+
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp">
+
+                                <TextView
+                                    android:id="@+id/Budget_Name3"
+                                    android:layout_width="290dp"
+                                    android:layout_height="29dp"
+                                    android:gravity="center_vertical"
+                                    android:text="Dream Car"
+                                    android:textSize="12dp" />
+
+                                <LinearLayout
+                                    android:layout_width="292dp"
+                                    android:layout_height="41dp"
+                                    android:layout_marginBottom="10dp"
+
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:id="@+id/CurrentBalance_Budget3"
+                                        android:layout_width="174dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:fontFamily="sans-serif-medium"
+                                        android:text="$ 2,000.00"
+                                        android:textAlignment="viewStart"
+                                        android:textColor="#D2242020"
+                                        android:textSize="22sp" />
+
+                                    <TextView
+                                        android:id="@+id/BugetGoal3"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="$150,000.00"
+                                        android:textAlignment="center" />
+                                </LinearLayout>
+
+                                <SeekBar
+                                    android:id="@+id/seekBar_Budget3"
+                                    android:layout_width="292dp"
+                                    android:layout_height="wrap_content"
+                                    android:backgroundTint="#10C971"
+                                    android:progressTint="#10C971"
+                                    android:thumbTint="#10C971"
+
+                                    />
+
+                            </LinearLayout>
+                        </com.google.android.material.card.MaterialCardView>
+
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="311dp"
+                            android:layout_height="109dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginTop="40dp"
+                            android:layout_marginRight="25dp"
+                            android:layout_marginBottom="90dp"
+                            android:backgroundTint="#fff"
+                            app:cardCornerRadius="12dp"
+                            app:cardElevation="3dp">
+
+                            <LinearLayout
+                                android:layout_width="312dp"
+                                android:layout_height="105dp"
+                                android:orientation="vertical"
+
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp">
+
+                                <TextView
+                                    android:id="@+id/Budget_Name4"
+                                    android:layout_width="290dp"
+                                    android:layout_height="29dp"
+                                    android:gravity="center_vertical"
+                                    android:text="MacBook  :("
+                                    android:textSize="12dp" />
+
+                                <LinearLayout
+                                    android:layout_width="292dp"
+                                    android:layout_height="41dp"
+                                    android:layout_marginBottom="10dp"
+
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:id="@+id/CurrentBalance_Budget4"
+                                        android:layout_width="174dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:fontFamily="sans-serif-medium"
+                                        android:text="$ 100.00"
+                                        android:textAlignment="viewStart"
+                                        android:textColor="#D2242020"
+                                        android:textSize="22sp" />
+
+                                    <TextView
+                                        android:id="@+id/BugetGoal4"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="$1000.00"
+                                        android:textAlignment="center" />
+                                </LinearLayout>
+
+                                <SeekBar
+                                    android:id="@+id/seekBar_Budget4"
+                                    android:layout_width="292dp"
+                                    android:layout_height="wrap_content"
+                                    android:backgroundTint="#10C971"
+                                    android:progressTint="#10C971"
+                                    android:thumbTint="#10C971"
+
+                                    />
+
+                            </LinearLayout>
+                        </com.google.android.material.card.MaterialCardView>
 
 
                     </LinearLayout>
@@ -418,7 +408,7 @@
 
     </RelativeLayout>
 
-<!--    <include layout="@layout/fragment_add_budget"></include>-->
+    <!--    <include layout="@layout/fragment_add_budget"></include>-->
 
 
 </FrameLayout>
