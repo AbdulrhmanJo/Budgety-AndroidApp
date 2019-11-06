@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
 android:layout_width="match_parent"
-android:layout_height="600dp"
+android:layout_height="wrap_content"
 xmlns:app="http://schemas.android.com/apk/res-auto"
 android:orientation="vertical"
 app:behavior_hideable="false"
@@ -9,168 +9,277 @@ app:behavior_peekHeight="0dp"
 app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
 android:id="@+id/bottom_sheet_id"
 android:background="@drawable/sheet_stayle"
+    android:padding="30dp"
+
     >
 
 
 
 
-    <TextView
+<!--    <TextView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Transtion Method"-->
+<!--        android:fontFamily="sans-serif-medium"-->
+<!--        android:textSize="16dp"-->
+<!--        android:textColor="#000"-->
+<!--        android:layout_marginTop="15dp"-->
+
+<!--        android:paddingLeft="20dp"-->
+<!--        android:paddingRight="20dp"-->
+<!--        />-->
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Transtion Method"
-        android:fontFamily="sans-serif-medium"
-        android:textSize="16dp"
-        android:textColor="#000"
-        android:layout_marginTop="15dp"
+        android:layout_height="wrap_content">
 
-        android:paddingLeft="20dp"
-        android:paddingRight="20dp"
-        />
-
-    <com.google.android.material.chip.ChipGroup
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        app:chipSpacingHorizontal="25dp"
-        app:singleSelection="true"
-        android:layout_gravity="center"
-        >
-
-        <com.google.android.material.chip.Chip
-            style="@style/Widget.MaterialComponents.Chip.Choice"
-            android:layout_width="100dp"
-            android:layout_height="50dp"
-            android:text="Income"
-            app:chipCornerRadius="5dp"
-            android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
-            android:textAlignment="center"
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/round_payment_24"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="25dp"
+            android:tint="#10C971"
             />
-        <com.google.android.material.chip.Chip
-            style="@style/Widget.MaterialComponents.Chip.Choice"
-            android:layout_width="100dp"
-            android:layout_height="50dp"
-            android:text="Saving"
-            app:chipCornerRadius="5dp"
-            android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
-            android:textAlignment="center"
 
-            />
-        <com.google.android.material.chip.Chip
-            style="@style/Widget.MaterialComponents.Chip.Choice"
-            android:layout_width="100dp"
-            android:layout_height="50dp"
-            android:text="Expense"
-            app:chipCornerRadius="5dp"
-            android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
-            android:textAlignment="center"
-
-            />
-    </com.google.android.material.chip.ChipGroup>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Description"
-        android:fontFamily="sans-serif-medium"
-        android:textSize="16dp"
-        android:textColor="#000"
-        android:layout_marginTop="20dp"
-        android:paddingLeft="20dp"
-        android:paddingRight="20dp"
-        />
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-        android:paddingLeft="20dp"
-        android:paddingRight="20dp"
-        >
-
-        <com.google.android.material.textfield.TextInputEditText
+        <com.google.android.material.chip.ChipGroup
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textStyle="italic"
-            android:backgroundTint="#fff"
-            />
+            app:chipSpacingHorizontal="25dp"
+            app:singleSelection="true"
+            android:layout_gravity="center"
+            >
 
-    </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.chip.Chip
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="80dp"
+                android:layout_height="45dp"
+                android:text="Income"
+                app:chipCornerRadius="5dp"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+                android:textAlignment="center"
+                />
+
+            <com.google.android.material.chip.Chip
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="80dp"
+                android:layout_height="45dp"
+                android:text="Saving"
+                app:chipCornerRadius="5dp"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+                android:textAlignment="center"
+                />
+
+            <com.google.android.material.chip.Chip
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="80dp"
+                android:layout_height="45dp"
+                android:text="Expense"
+                app:chipCornerRadius="5dp"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+                android:textAlignment="center"
+                />
+
+        </com.google.android.material.chip.ChipGroup>
+    </LinearLayout>
 
 
-    <TextView
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:text="Amount"
-    android:fontFamily="sans-serif-medium"
-    android:textSize="16dp"
-    android:textColor="#000"
-    android:layout_marginTop="25dp"
-        android:paddingLeft="20dp"
-        android:paddingRight="20dp"
-        />
 
-    <com.google.android.material.textfield.TextInputLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-        android:paddingLeft="20dp"
-        android:paddingRight="20dp"
-        >
+        android:layout_marginTop="35dp">
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="35dp"
+            android:src="@drawable/round_local_offer_24"
+            android:tint="#10C971"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="25dp"
+            />
 
-        <com.google.android.material.textfield.TextInputEditText
+        <Spinner
+            android:id="@+id/spinner1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:entries="@array/country_arrays"
+
+             />
+    </LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp">
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/outline_create_24"
+            android:tint="#10C971"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="25dp"
+            />
+
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textStyle="italic"
-            android:backgroundTint="#fff"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#fff"
+                android:hint="Write a note"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp">
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/round_monetization_on_24"
+            android:tint="#10C971"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="25dp"
             />
 
-    </com.google.android.material.textfield.TextInputLayout>
-
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Date"
-        android:fontFamily="sans-serif-medium"
-        android:textSize="16dp"
-        android:textColor="#000"
-        android:layout_marginTop="25dp"
-        android:paddingLeft="20dp"
-        android:paddingRight="20dp"
-        />
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-        android:layout_marginBottom="70dp"
-
-        android:paddingLeft="20dp"
-        android:paddingRight="20dp"
-        >
-
-        <com.google.android.material.textfield.TextInputEditText
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textStyle="italic"
-            android:backgroundTint="#fff"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#fff"
+                android:hint="Write an amount"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/round_date_range_24"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="25dp"
+            android:tint="#10C971"
             />
 
-    </com.google.android.material.textfield.TextInputLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/date_container"
+            >
+
+            <com.google.android.material.chip.ChipGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:chipSpacingHorizontal="25dp"
+                app:singleSelection="true"
+                android:layout_gravity="center"
+                android:id="@+id/chip_group"
+                >
+
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="80dp"
+                    android:layout_height="45dp"
+                    android:text="Today"
+                    app:chipCornerRadius="5dp"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+                    android:textAlignment="center"
+                    />
+
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:text="Yasterday"
+                    app:chipCornerRadius="5dp"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+                    android:textAlignment="center"
+                    />
+
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:text="Date"
+                    app:chipCornerRadius="5dp"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+                    android:textAlignment="center"
+                    app:chipIconVisible="true"
+                    app:chipIcon="@drawable/round_date_range_24"
+                    android:id="@+id/add_date"
+                    />
+
+            </com.google.android.material.chip.ChipGroup>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#fff"
+                    android:id="@+id/date_box"
+                    android:hint="Write a date"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
 
 
-    <TextView
+
+
+        </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
+
+
+
+
+
+
+    <com.google.android.material.button.MaterialButton
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#10C971"
-        android:text="Add a transtion"
+        android:text="Add a transaction"
         android:fontFamily="sans-serif-medium"
         android:textColor="#fff"
         android:gravity="center_horizontal"
         android:padding="15dp"
+        android:layout_marginTop="50dp"
+        android:id="@+id/hi"
         />
 
 </LinearLayout>

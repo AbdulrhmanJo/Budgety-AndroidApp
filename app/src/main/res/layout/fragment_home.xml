@@ -199,15 +199,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/container"
+        android:scrollbars="none"
+
         >
         <com.google.android.material.chip.ChipGroup
-
+            android:id="@+id/chip_group"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:singleLine="true"
             android:paddingLeft="30dp"
             android:paddingRight="32dp"
-            android:paddingTop="5dp"
+            android:paddingTop="10dp"
             app:singleSelection="true"
 
             >
@@ -279,7 +281,10 @@
                 style="@style/Widget.MaterialComponents.Chip.Choice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="November"/>
+                android:text="November"
+                android:checked="true"
+                android:id="@+id/november"
+                />
 
             <com.google.android.material.chip.Chip
                 style="@style/Widget.MaterialComponents.Chip.Choice"
@@ -328,7 +333,8 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="60dp">
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
 
                     <ImageView
                         android:layout_width="40dp"
@@ -351,6 +357,13 @@
                             android:layout_height="wrap_content"
                             android:text="Salary"
                             android:fontFamily="sans-serif-medium"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Businness"
+                            android:fontFamily="sans-serif"
                             />
 
                         <TextView
@@ -390,7 +403,8 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="60dp">
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
 
                     <ImageView
                         android:layout_width="40dp"
@@ -413,6 +427,13 @@
                             android:layout_height="wrap_content"
                             android:text="Salary"
                             android:fontFamily="sans-serif-medium"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Businness"
+                            android:fontFamily="sans-serif"
                             />
 
                         <TextView
@@ -452,7 +473,8 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="60dp">
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
 
                     <ImageView
                         android:layout_width="40dp"
@@ -475,6 +497,13 @@
                             android:layout_height="wrap_content"
                             android:text="Salary"
                             android:fontFamily="sans-serif-medium"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Businness"
+                            android:fontFamily="sans-serif"
                             />
 
                         <TextView
@@ -525,7 +554,8 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="60dp">
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
 
                     <ImageView
                         android:layout_width="40dp"
@@ -548,6 +578,13 @@
                             android:layout_height="wrap_content"
                             android:text="Salary"
                             android:fontFamily="sans-serif-medium"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Businness"
+                            android:fontFamily="sans-serif"
                             />
 
                         <TextView
@@ -587,7 +624,8 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="60dp">
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
 
                     <ImageView
                         android:layout_width="40dp"
@@ -610,6 +648,13 @@
                             android:layout_height="wrap_content"
                             android:text="Salary"
                             android:fontFamily="sans-serif-medium"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Businness"
+                            android:fontFamily="sans-serif"
                             />
 
                         <TextView
@@ -649,7 +694,8 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="60dp">
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
 
                     <ImageView
                         android:layout_width="40dp"
@@ -672,6 +718,13 @@
                             android:layout_height="wrap_content"
                             android:text="Salary"
                             android:fontFamily="sans-serif-medium"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Businness"
+                            android:fontFamily="sans-serif"
                             />
 
                         <TextView
@@ -711,7 +764,8 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="60dp">
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
 
                     <ImageView
                         android:layout_width="40dp"
@@ -734,6 +788,13 @@
                             android:layout_height="wrap_content"
                             android:text="Salary"
                             android:fontFamily="sans-serif-medium"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Businness"
+                            android:fontFamily="sans-serif"
                             />
 
                         <TextView
@@ -785,7 +846,8 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="60dp">
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
 
                     <ImageView
                         android:layout_width="40dp"
@@ -808,6 +870,13 @@
                             android:layout_height="wrap_content"
                             android:text="Salary"
                             android:fontFamily="sans-serif-medium"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Businness"
+                            android:fontFamily="sans-serif"
                             />
 
                         <TextView
@@ -847,7 +916,8 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="60dp">
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
 
                     <ImageView
                         android:layout_width="40dp"
@@ -870,6 +940,13 @@
                             android:layout_height="wrap_content"
                             android:text="Salary"
                             android:fontFamily="sans-serif-medium"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Businness"
+                            android:fontFamily="sans-serif"
                             />
 
                         <TextView
@@ -896,129 +973,75 @@
 
             </com.google.android.material.card.MaterialCardView>
             <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"
+            android:layout_marginRight="35dp"
+            android:layout_marginTop="15dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="5dp"
+                android:layout_marginBottom="150dp"
+            >
+
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="35dp"
-                android:layout_marginRight="35dp"
-                android:layout_marginTop="15dp"
-                app:cardCornerRadius="10dp"
-                app:cardElevation="5dp"
+                android:padding="10dp">
 
-                >
-
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="2dp"
+                    android:src="@drawable/round_keyboard_arrow_up_24"
+                    android:tint="#10C971" />
 
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="60dp">
-
-                    <ImageView
-                        android:layout_width="40dp"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="2dp"
-                        android:src="@drawable/round_keyboard_arrow_up_24"
-                        android:tint="#10C971" />
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:orientation="vertical"
-                        android:gravity="center_vertical"
-                        android:paddingLeft="5dp"
-                        >
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Salary"
-                            android:fontFamily="sans-serif-medium"
-                            />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="30 October, 2019"
-                            android:textSize="12dp"
-                            />
-                    </LinearLayout>
-
-
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="5dp"
+                    >
 
                     <TextView
                         android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:gravity="center_vertical"
-                        android:padding="15dp"
-                        android:text="$ 12,000.00"
-                        android:textColor="#10C971"
+                        android:layout_height="wrap_content"
+                        android:text="Salary"
                         android:fontFamily="sans-serif-medium"
                         />
-
-                </LinearLayout>
-
-            </com.google.android.material.card.MaterialCardView>
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="35dp"
-                android:layout_marginRight="35dp"
-                android:layout_marginTop="15dp"
-                app:cardCornerRadius="10dp"
-                app:cardElevation="5dp"
-
-                >
-
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="60dp">
-
-                    <ImageView
-                        android:layout_width="40dp"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="2dp"
-                        android:src="@drawable/round_keyboard_arrow_up_24"
-                        android:tint="#10C971" />
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:orientation="vertical"
-                        android:gravity="center_vertical"
-                        android:paddingLeft="5dp"
-                        >
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Salary"
-                            android:fontFamily="sans-serif-medium"
-                            />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="30 October, 2019"
-                            android:textSize="12dp"
-                            />
-                    </LinearLayout>
-
-
 
                     <TextView
                         android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:gravity="center_vertical"
-                        android:padding="15dp"
-                        android:text="$ 12,000.00"
-                        android:textColor="#10C971"
-                        android:fontFamily="sans-serif-medium"
+                        android:layout_height="wrap_content"
+                        android:text="Businness"
+                        android:fontFamily="sans-serif"
                         />
 
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="30 October, 2019"
+                        android:textSize="12dp"
+                        />
                 </LinearLayout>
 
-            </com.google.android.material.card.MaterialCardView>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:padding="15dp"
+                    android:text="$ 12,000.00"
+                    android:textColor="#10C971"
+                    android:fontFamily="sans-serif-medium"
+                    />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
 
 
 
