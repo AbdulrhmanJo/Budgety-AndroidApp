@@ -100,6 +100,9 @@ public class setting extends Fragment{
                         swapFragment(newfragment);
                     }else if(finalI==2){
                         //System.out.println("Language");
+                        Language newfragment =new Language();
+                        swapFragment(newfragment);
+
                     }else if(finalI==3){
                         Account newFragment = new Account();
                         swapFragment(newFragment);
@@ -110,6 +113,8 @@ public class setting extends Fragment{
                         swapFragment(newFragment);
                     }else if(finalI==5){
                        // System.out.println("Privacy");
+                        Privacy newfragment =new Privacy();
+                        swapFragment(newfragment);
                     }
 
                     cardView.setCardBackgroundColor(R.color.design_default_color_primary_dark);

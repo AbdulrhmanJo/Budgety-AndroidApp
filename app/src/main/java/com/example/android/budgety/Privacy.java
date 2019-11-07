@@ -13,9 +13,9 @@ import android.view.ViewGroup;
 
 
 
-public class Information  extends Fragment {
+public class Privacy extends Fragment {
 
-    public Information() {
+    public Privacy() {
 
         // Required empty public constructor
     }
@@ -23,9 +23,9 @@ public class Information  extends Fragment {
 
 
 
-    public static Information newInstance() {
+    public static Privacy newInstance() {
 
-        Information fragment = new Information();
+        Privacy fragment = new Privacy();
 
         return fragment;
     }
@@ -40,11 +40,9 @@ public class Information  extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
+        View view= inflater.inflate(R.layout.fragment_privacy, container, false);
 
-View view =inflater.inflate(R.layout.fragment_information, container, false);
-
-        Toolbar toolbar = (Toolbar) view.findViewById(R.id.toolbar_Information);
-
+        Toolbar toolbar = (Toolbar) view.findViewById(R.id.toolbar_Privacy);
         toolbar.setTitle(null);
         toolbar.setNavigationIcon(R.drawable.round_keyboard_backspace_24);
 

@@ -2,6 +2,7 @@ package com.example.android.budgety;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -44,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                TextView error = (TextView) findViewById(R.id.Wrong);
+
 
                 EditText Email = (EditText) findViewById(R.id.Email_SignIn) ;
                 String Str_Email = Email.getText().toString();
@@ -53,13 +54,25 @@ public class MainActivity extends AppCompatActivity {
                 String Str_Password = Password.getText().toString();
 
 
-                if(Str_Email.equalsIgnoreCase("rayan")&&Str_Password.equals("123")){
-                    openHomePage();
+
+                if(Str_Email.equalsIgnoreCase("rayantaj@gmail.com")){
+
+
+                    if(Str_Password.equals("123")){
+
+                        openHomePage();
+
+                    }else{
+                        WrongAnswerDialog();
+                    }
+
+
 
                 }else{
-                    error.setText("Wrong Entery ..Please try Again!!");
-
+                    UnregisteredEmail();
                 }
+
+
             }
         });
 
@@ -73,6 +86,22 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
+    public void WrongAnswerDialog(){
+
+        WrongPassword WP =new WrongPassword();
+        WP.show(getSupportFragmentManager(),"wrong entery");
+
+
+
+    }
+
+    public void UnregisteredEmail(){
+
+        UnRegisteredEmail UE =new UnRegisteredEmail();
+        UE.show(getSupportFragmentManager(),"wrong email");
+    }
+
 
 
 }

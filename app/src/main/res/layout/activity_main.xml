@@ -26,7 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="335dp"
-        android:background="#FFFFFF"
+        android:background="@drawable/roundedcorner"
         android:ems="10"
         android:hint="Password"
         android:inputType="textPassword" />
@@ -37,7 +37,8 @@
         android:layout_height="54dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="270dp"
-        android:background="#FFFFFF"
+
+        android:background="@drawable/roundedcorner"
         android:ems="10"
         android:hint="Email"
         android:inputType="textEmailAddress"
@@ -57,7 +58,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/sing_in"
         android:layout_alignParentStart="true"
-        android:layout_marginStart="133dp"
+        android:layout_marginStart="120dp"
         android:layout_marginTop="11dp"
         android:layout_marginRight="94dp"
         android:text="Not a member?"
@@ -94,27 +95,33 @@
 
     </TextView>
 
-    <TextView
-        android:id="@+id/Wrong"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="400dp"
-        android:layout_marginStart="48dp"
-        android:textColor="#FF0000"
-        android:fontFamily="sans-serif-medium"/>
-
     <com.google.android.material.button.MaterialButton
         android:id="@+id/signup"
         style="@style/Widget.MaterialComponents.Button.TextButton"
         android:layout_width="wrap_content"
         android:layout_height="35dp"
         android:layout_below="@+id/sing_in"
-        android:layout_alignParentEnd="true"
-        android:layout_marginLeft="-4dp"
-        android:layout_marginTop="3dp"
-        android:layout_marginEnd="110dp"
+        android:layout_marginLeft="-1dp"
+        android:layout_marginTop="2dp"
         android:layout_toRightOf="@+id/textView3"
         android:text="Sign Up"
+        android:textAlignment="textStart"
+        android:textColor="#E1536138"
+        android:textSize="11sp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/ForgetPassword_Button"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="225dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="25dp"
+        android:layout_marginLeft="-175dp"
+        android:layout_marginTop="385dp"
+        android:layout_toRightOf="@+id/textView3"
+        android:text="forget password ?"
+        android:textAlignment="textStart"
         android:textColor="#E1536138"
         android:textSize="11sp" />
 
