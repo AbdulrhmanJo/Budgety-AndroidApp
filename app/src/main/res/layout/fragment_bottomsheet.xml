@@ -45,7 +45,7 @@ android:background="@drawable/sheet_stayle"
         <com.google.android.material.chip.ChipGroup
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:chipSpacingHorizontal="30dp"
+            app:chipSpacingHorizontal="15dp"
             app:singleSelection="true"
             android:layout_gravity="center"
             >
@@ -195,7 +195,7 @@ android:background="@drawable/sheet_stayle"
             <com.google.android.material.chip.ChipGroup
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:chipSpacingHorizontal="25dp"
+                app:chipSpacingHorizontal="15dp"
                 app:singleSelection="true"
                 android:layout_gravity="center"
                 android:id="@+id/chip_group"
@@ -270,7 +270,7 @@ android:background="@drawable/sheet_stayle"
 
     <com.google.android.material.button.MaterialButton
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:background="#10C971"
         android:text="Add a transaction"
         android:fontFamily="sans-serif-medium"
@@ -278,6 +278,7 @@ android:background="@drawable/sheet_stayle"
         android:gravity="center_horizontal"
         android:padding="15dp"
         android:layout_marginTop="50dp"
+        android:layout_marginBottom="5dp"
         android:id="@+id/hi"
         />
 
