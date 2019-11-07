@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-                if(Str_Email.equalsIgnoreCase("rayantaj@gmail.com")){
+                if(Str_Email.equalsIgnoreCase("ray")){
 
 
                     if(Str_Password.equals("123")){

@@ -10,6 +10,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+
+import com.google.android.material.button.MaterialButton;
+import com.google.android.material.card.MaterialCardView;
+import com.google.android.material.textfield.TextInputEditText;
 
 
 public class fragment_budget extends Fragment {
@@ -40,12 +46,10 @@ public class fragment_budget extends Fragment {
 
         View view =  inflater.inflate(R.layout.fragment_fragment_budget, container, false);
 
-        Button icon =  (Button) view.findViewById(R.id.add_budget);
-
-        icon.setOnClickListener(new View.OnClickListener() {
+        Button newBudget =  (Button) view.findViewById(R.id.new_budget);
+        newBudget.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 new addBudget().show(getFragmentManager(),"");
             }
         });
@@ -54,6 +58,28 @@ public class fragment_budget extends Fragment {
     }
 
 
+
+
+    public void createCard(Budget family) {
+        LinearLayout container = (LinearLayout) this.getView().findViewById(R.id.BudgetContainer);
+        MaterialCardView cardView = new MaterialCardView(getActivity());
+
+
+        TextView budgetName = new TextView(getActivity());
+        budgetName.setText(family.getbName());
+        cardView.addView(budgetName,0);
+
+        LinearLayout SubContainer = new LinearLayout(getActivity());
+        TextView budgetCurrentBalance = new TextView(getActivity());
+        budgetName.setText("$" + family.getCurrentBalance());
+        TextView budgetTarget = new TextView(getActivity());
+        budgetName.setText("$" + family.getbTarget());
+        SubContainer.addView(budgetCurrentBalance,0);
+        SubContainer.addView(budgetTarget,1);
+        cardView.addView(SubContainer,1);
+
+        container.addView(cardView,0);
+    }
 
 
 }
