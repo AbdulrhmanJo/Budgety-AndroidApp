@@ -153,15 +153,15 @@
                                     android:textSize="12dp" />
 
                                 <LinearLayout
-                                    android:layout_width="292dp"
-                                    android:layout_height="41dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:layout_marginBottom="10dp"
 
                                     android:orientation="horizontal">
 
                                     <TextView
                                         android:id="@+id/CurrentBalance_Budget1"
-                                        android:layout_width="174dp"
+                                        android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_weight="1"
                                         android:fontFamily="sans-serif-medium"
@@ -221,22 +221,24 @@
                                     android:textSize="12dp" />
 
                                 <LinearLayout
-                                    android:layout_width="292dp"
-                                    android:layout_height="41dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:layout_marginBottom="10dp"
 
                                     android:orientation="horizontal">
 
                                     <TextView
                                         android:id="@+id/CurrentBalance_Budget2"
-                                        android:layout_width="174dp"
+                                        android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_weight="1"
                                         android:fontFamily="sans-serif-medium"
                                         android:text="$ 50,000.00"
                                         android:textAlignment="viewStart"
                                         android:textColor="#D2242020"
-                                        android:textSize="22sp" />
+                                        android:textSize="22sp"
+                                        w
+                                        />
 
                                     <TextView
                                         android:id="@+id/BugetGoal2"
@@ -288,15 +290,15 @@
                                     android:textSize="12dp" />
 
                                 <LinearLayout
-                                    android:layout_width="292dp"
-                                    android:layout_height="41dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:layout_marginBottom="10dp"
 
                                     android:orientation="horizontal">
 
                                     <TextView
                                         android:id="@+id/CurrentBalance_Budget3"
-                                        android:layout_width="174dp"
+                                        android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_weight="1"
                                         android:fontFamily="sans-serif-medium"
@@ -343,28 +345,27 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:orientation="vertical"
-
                                 android:padding="15dp"
                                >
 
                                 <TextView
                                     android:id="@+id/Budget_Name4"
-                                    android:layout_width="290dp"
+                                    android:layout_width="match_parent"
                                     android:layout_height="29dp"
                                     android:gravity="center_vertical"
                                     android:text="MacBook  :("
                                     android:textSize="12dp" />
 
                                 <LinearLayout
-                                    android:layout_width="292dp"
-                                    android:layout_height="41dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:layout_marginBottom="10dp"
 
                                     android:orientation="horizontal">
 
                                     <TextView
                                         android:id="@+id/CurrentBalance_Budget4"
-                                        android:layout_width="174dp"
+                                        android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_weight="1"
                                         android:fontFamily="sans-serif-medium"
