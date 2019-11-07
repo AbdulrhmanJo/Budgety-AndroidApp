@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+UnRegisteredEmail u = new UnRegisteredEmail(MainActivity.this);
 
         Button signIn = (Button) findViewById(R.id.sing_in);
         Button SignUp =(Button) findViewById(R.id.signup);
@@ -98,7 +98,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void UnregisteredEmail(){
 
-        UnRegisteredEmail UE =new UnRegisteredEmail();
+        UnRegisteredEmail UE =new UnRegisteredEmail(MainActivity.this);
         UE.show(getSupportFragmentManager(),"wrong email");
     }
 
