@@ -125,8 +125,8 @@
                         android:orientation="vertical">
 
                         <com.google.android.material.card.MaterialCardView
-                            android:layout_width="311dp"
-                            android:layout_height="109dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:layout_marginLeft="25dp"
                             android:layout_marginTop="40dp"
@@ -134,15 +134,15 @@
                             android:layout_marginBottom="6dp"
                             android:backgroundTint="#fff"
                             app:cardCornerRadius="12dp"
-                            app:cardElevation="3dp">
+                            app:cardElevation="3dp"
+                            >
 
                             <LinearLayout
-                                android:layout_width="312dp"
-                                android:layout_height="105dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
                                 android:orientation="vertical"
-
-                                android:paddingLeft="10dp"
-                                android:paddingRight="10dp">
+                                android:padding="15dp"
+                                >
 
                                 <TextView
                                     android:id="@+id/Budget_Name1"
@@ -194,8 +194,8 @@
 
 
                         <com.google.android.material.card.MaterialCardView
-                            android:layout_width="311dp"
-                            android:layout_height="109dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:layout_marginLeft="25dp"
                             android:layout_marginTop="40dp"
@@ -206,12 +206,11 @@
                             app:cardElevation="3dp">
 
                             <LinearLayout
-                                android:layout_width="312dp"
-                                android:layout_height="105dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
                                 android:orientation="vertical"
-
-                                android:paddingLeft="10dp"
-                                android:paddingRight="10dp">
+                                android:padding="15dp"
+                                >
 
                                 <TextView
                                     android:id="@+id/Budget_Name2"
@@ -261,11 +260,9 @@
                         </com.google.android.material.card.MaterialCardView>
 
 
-
-
                         <com.google.android.material.card.MaterialCardView
-                            android:layout_width="311dp"
-                            android:layout_height="109dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:layout_marginLeft="25dp"
                             android:layout_marginTop="40dp"
@@ -276,12 +273,11 @@
                             app:cardElevation="3dp">
 
                             <LinearLayout
-                                android:layout_width="312dp"
-                                android:layout_height="105dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
                                 android:orientation="vertical"
-
-                                android:paddingLeft="10dp"
-                                android:paddingRight="10dp">
+                                android:padding="15dp"
+                                >
 
                                 <TextView
                                     android:id="@+id/Budget_Name3"
@@ -332,8 +328,8 @@
 
 
                         <com.google.android.material.card.MaterialCardView
-                            android:layout_width="311dp"
-                            android:layout_height="109dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:layout_marginLeft="25dp"
                             android:layout_marginTop="40dp"
@@ -344,12 +340,12 @@
                             app:cardElevation="3dp">
 
                             <LinearLayout
-                                android:layout_width="312dp"
-                                android:layout_height="105dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
                                 android:orientation="vertical"
 
-                                android:paddingLeft="10dp"
-                                android:paddingRight="10dp">
+                                android:padding="15dp"
+                               >
 
                                 <TextView
                                     android:id="@+id/Budget_Name4"
