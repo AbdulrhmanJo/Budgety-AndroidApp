@@ -13,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.MenuItem;
@@ -68,8 +69,10 @@ public class home extends Fragment {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getActivity(), "Profile clicked",
-                        Toast.LENGTH_LONG).show();
+                FragmentTransaction ft = getFragmentManager().beginTransaction();
+                ft.replace(R.id.fragment_container,
+                        new Account()).commit();
+                ft.addToBackStack("homePage");
             }
         });
 
@@ -80,8 +83,10 @@ public class home extends Fragment {
             public boolean onMenuItemClick(MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.notfication_icon:
-                        getFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        FragmentTransaction ft = getFragmentManager().beginTransaction();
+                        ft.replace(R.id.fragment_container,
                                 new notification()).commit();
+                        ft.addToBackStack("homePage");
                         break;
                 }
                 return true;

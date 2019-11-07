@@ -4,6 +4,7 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 
+import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
@@ -40,11 +41,21 @@ public class Account extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
+        View view =  inflater.inflate(R.layout.fragment_account, container, false);
+
+        Toolbar toolbar = (Toolbar) view.findViewById(R.id.account_toolbar);
+        toolbar.setTitle(null);
+        toolbar.setNavigationIcon(R.drawable.round_keyboard_backspace_24);
+
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getFragmentManager().popBackStackImmediate();
+            }
+        });
 
 
-
-
-        return inflater.inflate(R.layout.fragment_account, container, false);
+        return view;
     }
 
 

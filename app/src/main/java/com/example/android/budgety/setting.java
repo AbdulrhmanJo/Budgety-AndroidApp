@@ -79,7 +79,7 @@ public class setting extends Fragment{
         //fra newGamefragment = new GameSettingsFragment();
         FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.fragment_container, newFragment);
-        fragmentTransaction.addToBackStack(null);
+        fragmentTransaction.addToBackStack("setting");
         fragmentTransaction.commit();
     }
     private void setSingleEvent(GridLayout gridLayout) {

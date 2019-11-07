@@ -39,8 +39,7 @@ public class notification extends Fragment {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new home()).commit();
+                getFragmentManager().popBackStackImmediate();
             }
         });
 
