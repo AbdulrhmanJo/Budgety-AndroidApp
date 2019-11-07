@@ -237,7 +237,6 @@
                                         android:textAlignment="viewStart"
                                         android:textColor="#D2242020"
                                         android:textSize="22sp"
-                                        w
                                         />
 
                                     <TextView
