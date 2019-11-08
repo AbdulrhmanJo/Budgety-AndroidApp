@@ -39,8 +39,6 @@ public class addBudget extends BottomSheetDialogFragment {
                 TextInputEditText budgetTarget = view.findViewById(R.id.budget_target);
                 double bTagert = Double.parseDouble(budgetTarget.getText().toString());
 
-
-
                 Budget budget = new Budget(bName, bTagert);
                 FragmentManager fm = getFragmentManager();
                 fragment_budget fragment_budget = (fragment_budget) fm.findFragmentById(R.id.fragment_container);

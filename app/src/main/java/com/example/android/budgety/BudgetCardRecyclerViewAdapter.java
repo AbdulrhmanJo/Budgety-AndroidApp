@@ -4,7 +4,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import java.text.NumberFormat;
 import java.util.List;
+import java.util.Locale;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -27,8 +29,8 @@ public class BudgetCardRecyclerViewAdapter extends RecyclerView.Adapter<BudgetCa
     @Override
     public void onBindViewHolder(@NonNull BudgetCardViewHolder holder, int position) {
         holder.BudgetName.setText(budgetList.get(position).getbName());
-        holder.BudgetCurrentBalance.setText("$"+budgetList.get(position).getCurrentBalance());
-        holder.BudgetTarget.setText("$"+budgetList.get(position).getbTarget());
+        holder.BudgetCurrentBalance.setText(NumberFormat.getCurrencyInstance(new Locale("en","US")).format(budgetList.get(position).getCurrentBalance()));
+        holder.BudgetTarget.setText(NumberFormat.getCurrencyInstance(new Locale("en","US")).format(budgetList.get(position).getbTarget()));
     }
 
     @Override

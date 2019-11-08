@@ -14,6 +14,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
+    static customerAccount account;
     public void openHomePage() {
         Intent intent = new Intent(this,Home_page.class);
         startActivity(intent);
@@ -61,6 +62,7 @@ UnRegisteredEmail u = new UnRegisteredEmail(MainActivity.this);
                     if(Str_Password.equals("123")){
 
                         openHomePage();
+                        account = new customerAccount();
 
                     }else{
                         WrongAnswerDialog();
