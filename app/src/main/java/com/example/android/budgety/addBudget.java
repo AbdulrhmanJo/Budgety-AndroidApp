@@ -8,6 +8,7 @@ import com.google.android.material.button.MaterialButton;
 import com.google.android.material.card.MaterialCardView;
 import com.google.android.material.textfield.TextInputEditText;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -29,7 +30,7 @@ public class addBudget extends BottomSheetDialogFragment {
 
         final View view = inflater.inflate(R.layout.fragment_add_budget, container, false);
 
-        MaterialButton addBudget = view.findViewById(R.id.add_budget);
+        final MaterialButton addBudget = view.findViewById(R.id.add_budget);
         addBudget.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -38,23 +39,13 @@ public class addBudget extends BottomSheetDialogFragment {
                 TextInputEditText budgetTarget = view.findViewById(R.id.budget_target);
                 double bTagert = Double.parseDouble(budgetTarget.getText().toString());
 
-                Budget family = new Budget(bName, bTagert);
+
+
+                Budget budget = new Budget(bName, bTagert);
                 FragmentManager fm = getFragmentManager();
                 fragment_budget fragment_budget = (fragment_budget) fm.findFragmentById(R.id.fragment_container);
-
-                fragment_budget.createCard(family);
-                fragment_budget.createCard(family);
-
-                fragment_budget.createCard(family);
-                fragment_budget.createCard(family);
-                fragment_budget.createCard(family);
-                fragment_budget.createCard(family);
-                fragment_budget.createCard(family);
-                fragment_budget.createCard(family);
-                fragment_budget.createCard(family);
-                fragment_budget.createCard(family);
-                fragment_budget.createCard(family);
-
+                fragment_budget.addBudget(budget);
+                dismiss();
             }
         });
 

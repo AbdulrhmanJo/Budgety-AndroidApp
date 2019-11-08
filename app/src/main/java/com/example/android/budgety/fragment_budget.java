@@ -1,24 +1,35 @@
 package com.example.android.budgety;
 
+import android.graphics.Color;
 import android.os.Bundle;
 
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.card.MaterialCardView;
 import com.google.android.material.textfield.TextInputEditText;
 
+import java.util.ArrayList;
+import java.util.List;
+
 
 public class fragment_budget extends Fragment {
+    List<Budget> budgetList;
+    BudgetCardRecyclerViewAdapter myAdapter;
 
     public fragment_budget() {
 
@@ -54,31 +65,28 @@ public class fragment_budget extends Fragment {
             }
         });
 
+
+        RecyclerView mRecyclerView = view.findViewById(R.id.recycler_view);
+        GridLayoutManager mGridLayoutManager = new GridLayoutManager(getActivity(), 1);
+        mRecyclerView.setLayoutManager(mGridLayoutManager);
+
+
+
+        budgetList = new ArrayList<>();
+        myAdapter = new BudgetCardRecyclerViewAdapter(budgetList);
+        mRecyclerView.setAdapter(myAdapter);
+
+
+
         return view;
     }
 
 
 
 
-    public void createCard(Budget family) {
-        LinearLayout container = (LinearLayout) this.getView().findViewById(R.id.BudgetContainer);
-        MaterialCardView cardView = new MaterialCardView(getActivity());
-
-
-        TextView budgetName = new TextView(getActivity());
-        budgetName.setText(family.getbName());
-        cardView.addView(budgetName,0);
-
-        LinearLayout SubContainer = new LinearLayout(getActivity());
-        TextView budgetCurrentBalance = new TextView(getActivity());
-        budgetName.setText("$" + family.getCurrentBalance());
-        TextView budgetTarget = new TextView(getActivity());
-        budgetName.setText("$" + family.getbTarget());
-        SubContainer.addView(budgetCurrentBalance,0);
-        SubContainer.addView(budgetTarget,1);
-        cardView.addView(SubContainer,1);
-
-        container.addView(cardView,0);
+    public void addBudget(Budget budget) {
+        budgetList.add(0,budget);
+        myAdapter.notifyItemInserted(0);
     }
 
 

@@ -1,5 +1,9 @@
 package com.example.android.budgety;
 
+import android.content.res.Resources;
+
+import java.util.List;
+
 public class Budget {
     private String bName;
     private double bTarget;
@@ -10,6 +14,8 @@ public class Budget {
         this.bTarget=bTarget;
         this.CurrentBalance = 0.0;
     }
+
+
 
     public String getbName() {
         return bName;
