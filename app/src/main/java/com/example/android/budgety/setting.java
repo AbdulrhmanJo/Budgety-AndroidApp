@@ -1,7 +1,9 @@
 package com.example.android.budgety;
 
 import android.annotation.SuppressLint;
+import android.content.ComponentName;
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 
@@ -18,6 +20,7 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.google.android.material.card.MaterialCardView;
+import com.google.firebase.auth.FirebaseAuth;
 
 
 public class setting extends Fragment{
@@ -49,6 +52,17 @@ public class setting extends Fragment{
         // Inflate the layout for this fragment
 
         View view = inflater.inflate(R.layout.fragment_setting, container, false);
+
+        Button b = (Button) view.findViewById(R.id.SignOut_Button);
+
+
+b.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View view) {
+        logout(view);
+    }
+});
+
 
 
 
@@ -121,6 +135,13 @@ public class setting extends Fragment{
                 }
             });
         }
+    }
+
+    public void logout(View view) {
+        FirebaseAuth.getInstance().signOut();//logout
+        Signup m = new Signup();
+       m.openSignIn();
+
     }
 
 }

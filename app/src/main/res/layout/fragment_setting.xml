@@ -335,7 +335,7 @@
                     android:layout_height="match_parent">
 
                     <Button
-                        android:id="@+id/button2"
+                        android:id="@+id/SignOut_Button"
                         android:layout_width="344dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="50dp"
@@ -343,6 +343,7 @@
                         android:layout_marginBottom="70dp"
                         android:backgroundTint="#FAFF0000"
                         android:text="Signout"
+
                         app:iconTint="#00FF0303" />
                 </RelativeLayout>
 

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "862973455949",
+    "firebase_url": "https://budgety-556c7.firebaseio.com",
+    "project_id": "budgety-556c7",
+    "storage_bucket": "budgety-556c7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:862973455949:android:14f2238da52a2713dfb604",
+        "android_client_info": {
+          "package_name": "com.example.android.budgety"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "862973455949-9q1efb3gfs6qegkg7kpt2k6b8dgcslnl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.android.budgety",
+            "certificate_hash": "82b59ade8805dda99d0323bad33402ed226993df"
+          }
+        },
+        {
+          "client_id": "862973455949-p60b3t4cfgvtt775fs31s0rapgb0bhr9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAi_hSJP1XC_l0tKc2m78U2kC_Y1TbA8U8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "862973455949-p60b3t4cfgvtt775fs31s0rapgb0bhr9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
