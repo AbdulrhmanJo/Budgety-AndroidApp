@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class customerAccount {
 
     ArrayList<Budget> budgets;
-
+    private double totalSavings;
 
     customerAccount(){
         budgets= new ArrayList<>();
@@ -20,16 +20,15 @@ public class customerAccount {
     }
 
 
+    public double getTotalSavings() {
+        return totalSavings;
+    }
 
+    public void setTotalSavings(double totalSavings) {
+        this.totalSavings = totalSavings;
+    }
 
-
-
-
-
-
-
-
-
-
-
+    public void addTotalSavings(double amount) {
+        this.totalSavings += amount;
+    }
 }

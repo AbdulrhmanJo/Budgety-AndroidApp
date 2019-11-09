@@ -26,8 +26,10 @@ import com.google.android.material.button.MaterialButton;
 import com.google.android.material.card.MaterialCardView;
 import com.google.android.material.textfield.TextInputEditText;
 
+import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 
 public class fragment_budget extends Fragment {
@@ -57,13 +59,13 @@ public class fragment_budget extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
 
-        View view =  inflater.inflate(R.layout.fragment_fragment_budget, container, false);
+        View view = inflater.inflate(R.layout.fragment_fragment_budget, container, false);
 
-        Button newBudget =  (Button) view.findViewById(R.id.new_budget);
+        Button newBudget = (Button) view.findViewById(R.id.new_budget);
         newBudget.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                new addBudget().show(getFragmentManager(),"");
+                new addBudget().show(getFragmentManager(), "");
             }
         });
 
@@ -79,6 +81,7 @@ public class fragment_budget extends Fragment {
                 ft.addToBackStack(null);
             }
         });
+
 
         toolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
             @Override
@@ -99,21 +102,22 @@ public class fragment_budget extends Fragment {
         RecyclerView mRecyclerView = view.findViewById(R.id.recycler_view);
         GridLayoutManager mGridLayoutManager = new GridLayoutManager(getActivity(), 1);
         mRecyclerView.setLayoutManager(mGridLayoutManager);
-
         myAdapter = new BudgetCardRecyclerViewAdapter(MainActivity.account.getBudgets());
         mRecyclerView.setAdapter(myAdapter);
 
+
+        TextView totalSavings = view.findViewById(R.id.total_Savings);
+        totalSavings.setText(NumberFormat.getCurrencyInstance(new Locale("en", "US")).format(MainActivity.account.getTotalSavings()));
 
 
         return view;
     }
 
 
-
-
     public void addBudget(Budget budget) {
         MainActivity.account.AddBudget(budget);
         myAdapter.notifyItemInserted(0);
+
     }
 
 

@@ -1,36 +1,16 @@
 package com.example.android.budgety;
 
-import android.app.DatePickerDialog;
-import android.content.Context;
-import android.content.res.ColorStateList;
-import android.graphics.Color;
-import android.net.Uri;
-import android.os.Bundle;
 
-import androidx.annotation.IdRes;
-import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.AppCompatActivity;
+import android.os.Bundle;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
-
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.DatePicker;
-import android.widget.EditText;
 import android.widget.HorizontalScrollView;
-import android.widget.LinearLayout;
-import android.widget.Toast;
-
-import com.google.android.material.button.MaterialButton;
-import com.google.android.material.chip.Chip;
 import com.google.android.material.chip.ChipGroup;
-import com.google.android.material.textfield.TextInputEditText;
-
-import java.util.Calendar;
 
 
 public class home extends Fragment {
@@ -41,7 +21,6 @@ public class home extends Fragment {
 
     int y, m, d;
     String dop = " ";
-
 
 
     public static home newInstance() {
@@ -94,7 +73,6 @@ public class home extends Fragment {
         });
 
 
-
         final HorizontalScrollView horizontalScrollView = (HorizontalScrollView) view.findViewById(R.id.month_navigation_bar);
 
 
@@ -111,10 +89,6 @@ public class home extends Fragment {
 
         return view;
     }
-
-
-
-
 
 
 }

@@ -53,6 +53,13 @@
                 android:textAlignment="center" />
         </LinearLayout>
 
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            />
+
 <!--        <SeekBar-->
 <!--            android:id="@+id/seekBar_Budget1"-->
 <!--            android:layout_width="292dp"-->
