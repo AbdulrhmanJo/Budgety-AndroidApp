@@ -1,21 +1,21 @@
 {
   "project_info": {
-    "project_number": "862973455949",
-    "firebase_url": "https://budgety-556c7.firebaseio.com",
-    "project_id": "budgety-556c7",
-    "storage_bucket": "budgety-556c7.appspot.com"
+    "project_number": "984784961297",
+    "firebase_url": "https://budgety-1000b.firebaseio.com",
+    "project_id": "budgety-1000b",
+    "storage_bucket": "budgety-1000b.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:862973455949:android:14f2238da52a2713dfb604",
+        "mobilesdk_app_id": "1:984784961297:android:52a50d57687c81a21956b0",
         "android_client_info": {
           "package_name": "com.example.android.budgety"
         }
       },
       "oauth_client": [
         {
-          "client_id": "862973455949-9q1efb3gfs6qegkg7kpt2k6b8dgcslnl.apps.googleusercontent.com",
+          "client_id": "984784961297-ahnrqprvi9s1fa047g8078so768i56o5.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.example.android.budgety",
@@ -23,20 +23,20 @@
           }
         },
         {
-          "client_id": "862973455949-p60b3t4cfgvtt775fs31s0rapgb0bhr9.apps.googleusercontent.com",
+          "client_id": "984784961297-mnu0kgh9j0dsom7a67cdskka7rrc3dvo.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAi_hSJP1XC_l0tKc2m78U2kC_Y1TbA8U8"
+          "current_key": "AIzaSyAdppxWjqYh3QdvtVFSOjP8DayHI0iemC4"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "862973455949-p60b3t4cfgvtt775fs31s0rapgb0bhr9.apps.googleusercontent.com",
+              "client_id": "984784961297-mnu0kgh9j0dsom7a67cdskka7rrc3dvo.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
