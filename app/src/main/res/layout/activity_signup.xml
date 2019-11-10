@@ -8,6 +8,17 @@
     tools:context=".MainActivity">
 
 
+    <ProgressBar
+        android:id="@+id/progressBar2"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="81dp"
+        android:layout_height="78dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:progressTint="#00811B1B"
+        android:visibility="invisible" />
+
     <Button
         android:id="@+id/SignUp_Action"
         android:layout_width="168dp"
@@ -20,7 +31,7 @@
         app:backgroundTint="#E1A9D64C" />
 
     <EditText
-        android:id="@+id/password_username"
+        android:id="@+id/Username_Signup"
         style="@style/Base.Widget.MaterialComponents.AutoCompleteTextView"
         android:layout_width="315dp"
         android:layout_height="wrap_content"
@@ -29,11 +40,11 @@
         android:background="@drawable/roundedcorner"
         android:ems="10"
         android:hint="Username"
-        android:inputType="textPassword" />
+        android:inputType="text" />
 
 
     <EditText
-        android:id="@+id/password_SignIn"
+        android:id="@+id/Password_Signup"
         style="@style/Base.Widget.MaterialComponents.AutoCompleteTextView"
         android:layout_width="315dp"
         android:layout_height="wrap_content"
@@ -46,7 +57,7 @@
 
 
     <EditText
-        android:id="@+id/Email_SignIn"
+        android:id="@+id/Email_Signup"
         android:layout_width="315dp"
         android:layout_height="54dp"
         android:layout_centerHorizontal="true"

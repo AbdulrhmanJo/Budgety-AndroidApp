@@ -19,9 +19,6 @@ public class home extends Fragment {
         // Required empty public constructor
     }
 
-    int y, m, d;
-    String dop = " ";
-
 
     public static home newInstance() {
         home fragment = new home();
