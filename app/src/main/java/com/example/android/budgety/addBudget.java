@@ -85,8 +85,12 @@ public class addBudget extends BottomSheetDialogFragment {
                 Budget budget = new Budget(Budget_Name, bTagert);
                 FragmentManager fm = getFragmentManager();
                 fragment_budget fragment_budget = (fragment_budget) fm.findFragmentById(R.id.fragment_container);
+
                 fragment_budget.addBudget(budget);
                 dismiss();
+
+
+
             }
         });
 

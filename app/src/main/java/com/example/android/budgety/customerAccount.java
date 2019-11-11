@@ -60,6 +60,7 @@ public class customerAccount {
     }
 
 
+
     public double getTotalSavings() {
         return totalSavings;
     }
