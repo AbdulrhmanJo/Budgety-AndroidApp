@@ -1,8 +1,10 @@
 package com.example.android.budgety;
 
+import android.app.Activity;
 import android.graphics.Color;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.widget.Toolbar;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
@@ -11,6 +13,7 @@ import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
@@ -22,18 +25,40 @@ import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.card.MaterialCardView;
 import com.google.android.material.textfield.TextInputEditText;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.EventListener;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreException;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
 
 import java.text.NumberFormat;
 import java.util.ArrayList;
+import java.util.EventListenerProxy;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
+import java.util.Map;
+import java.util.concurrent.Executor;
+
+import javax.annotation.Nullable;
 
 
 public class fragment_budget extends Fragment {
     BudgetCardRecyclerViewAdapter myAdapter;
+
+
+    FirebaseAuth firebaseAuth;
+    FirebaseFirestore firestore;
+    String UserID;
 
     public fragment_budget() {
 
@@ -58,6 +83,7 @@ public class fragment_budget extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+
 
         View view = inflater.inflate(R.layout.fragment_fragment_budget, container, false);
 
@@ -99,6 +125,25 @@ public class fragment_budget extends Fragment {
         });
 
 
+
+
+
+
+  /*      DocumentReference documentReference = firestore.collection("users").document(UserID).collection("budgets").document("ri4qj38rZKiw3kgSQJRm");
+
+documentReference.addSnapshotListener(new EventListener<DocumentSnapshot>(){
+    @Override
+    public void onEvent(@Nullable DocumentSnapshot documentSnapshot, @Nullable FirebaseFirestoreException e) {
+        System.out.println("THE USER ID  IS     : "+UserID);
+        System.out.println("THE BUDGET NAME  IS : "+documentSnapshot.getString("Budegt Name"));
+        System.out.println("THE BUDGET GOAL  IS : "+documentSnapshot.getString("target"));
+
+    }
+});
+
+*/
+
+
         RecyclerView mRecyclerView = view.findViewById(R.id.recycler_view);
         GridLayoutManager mGridLayoutManager = new GridLayoutManager(getActivity(), 1);
         mRecyclerView.setLayoutManager(mGridLayoutManager);
@@ -119,6 +164,9 @@ public class fragment_budget extends Fragment {
         myAdapter.notifyItemInserted(0);
 
     }
+
+
+    //public void
 
 
 }
