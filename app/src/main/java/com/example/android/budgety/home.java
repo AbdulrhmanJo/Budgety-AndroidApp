@@ -10,7 +10,12 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.HorizontalScrollView;
+import android.widget.TextView;
+
 import com.google.android.material.chip.ChipGroup;
+
+import java.text.NumberFormat;
+import java.util.Locale;
 
 
 public class home extends Fragment {
@@ -37,6 +42,16 @@ public class home extends Fragment {
         // Inflate the layout for this fragment
 
         final View view = inflater.inflate(R.layout.fragment_home, container, false);
+
+
+        TextView currentBalance = view.findViewById(R.id.CurrentBalance);
+        currentBalance.setText(NumberFormat.getCurrencyInstance(new Locale("en","US")).format(MainActivity.account.getBalance()));
+        TextView income = view.findViewById(R.id.income_amount);
+        income.setText(NumberFormat.getCurrencyInstance(new Locale("en","US")).format(MainActivity.account.getIncome()));
+        TextView savings = view.findViewById(R.id.saving_amount);
+        savings.setText(NumberFormat.getCurrencyInstance(new Locale("en","US")).format(MainActivity.account.getSavings()));
+        TextView expenses = view.findViewById(R.id.expenses_amount);
+        expenses.setText(NumberFormat.getCurrencyInstance(new Locale("en","US")).format(MainActivity.account.getExpenses()));
 
 
         final Toolbar toolbar = (Toolbar) view.findViewById(R.id.toolbar);
@@ -86,6 +101,9 @@ public class home extends Fragment {
 
         return view;
     }
+
+
+
 
 
 }
