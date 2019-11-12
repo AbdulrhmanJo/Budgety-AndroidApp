@@ -23,6 +23,8 @@ import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
@@ -70,7 +72,7 @@ public class BottomSheetListDialogFragment extends BottomSheetDialogFragment {
         final TextView amountText = view.findViewById(R.id.amount_holder);
         final ChipGroup DatechipGroup = (ChipGroup) view.findViewById(R.id.Datechip_group);
         final TextView dateText = view.findViewById(R.id.date_holder);
-        MaterialButton b = view.findViewById(R.id.hi);
+        final MaterialButton b = view.findViewById(R.id.hi);
 
         b.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -80,13 +82,18 @@ public class BottomSheetListDialogFragment extends BottomSheetDialogFragment {
                 String decs = decsText.getText().toString();
                 double amount = Double.parseDouble(amountText.getText().toString());
                 int Date_chip_id = DatechipGroup.getCheckedChipId();
-                Date date;
+                Date date = null;
                 if (Date_chip_id == R.id.today) {
                     date = new Date();
                 } else if (Date_chip_id == R.id.yasterday) {
                     date = new Date();
                 } else {
-                    date = new Date(dateText.getText().toString());
+                    SimpleDateFormat formatter1=new SimpleDateFormat("dd/MM/yyyy");
+                    try {
+                        date = formatter1.parse(dateText.getText().toString());
+                    } catch (ParseException e) {
+                        e.printStackTrace();
+                    }
                 }
 
                 FragmentManager fm = getFragmentManager();
@@ -94,9 +101,9 @@ public class BottomSheetListDialogFragment extends BottomSheetDialogFragment {
                 MainActivity.account.makeTransaction(Trans_chip_id, amount, category, decs, date);
                 home.updateHeader(home.getView());
                 home.myAdapter.notifyItemInserted(0);
+//
                 dismiss();
             }
-
         });
 
         DatechipGroup.setOnCheckedChangeListener(new ChipGroup.OnCheckedChangeListener() {

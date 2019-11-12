@@ -8,6 +8,7 @@ public class Budget {
     private String bName;
     private double bTarget;
     private double CurrentBalance;
+    private int progress;
 
     Budget(String bName, double bTarget){
         this.bName=bName;
@@ -16,6 +17,14 @@ public class Budget {
     }
 
 
+
+    public int getProgress() {
+        return progress;
+    }
+
+    public void setProgress(int progress) {
+        this.progress = progress;
+    }
 
     public String getbName() {
         return bName;

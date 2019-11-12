@@ -2,6 +2,7 @@ package com.example.android.budgety;
 
 
 import android.os.Bundle;
+
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
@@ -15,6 +16,7 @@ import android.view.ViewGroup;
 import android.widget.HorizontalScrollView;
 import android.widget.TextView;
 
+import com.google.android.material.chip.Chip;
 import com.google.android.material.chip.ChipGroup;
 
 import java.text.NumberFormat;
@@ -77,36 +79,50 @@ public class home extends Fragment {
                 return true;
             }
         });
-
+        final ChipGroup group = view.findViewById(R.id.chip_group);
+        Chip chip = (Chip) group.getChildAt(10);
+        chip.setChecked(true);
         final HorizontalScrollView horizontalScrollView = (HorizontalScrollView) view.findViewById(R.id.month_navigation_bar);
         horizontalScrollView.post(new Runnable() {
 
             @Override
             public void run() {
-                ChipGroup group = view.findViewById(R.id.chip_group);
                 horizontalScrollView.smoothScrollTo(group.getChildAt(11).getLeft(), 0);
             }
 
         });
 
+
         RecyclerView mRecyclerView = view.findViewById(R.id.recycler_view);
         GridLayoutManager mGridLayoutManager = new GridLayoutManager(getActivity(), 1);
         mRecyclerView.setLayoutManager(mGridLayoutManager);
-        myAdapter = new TransactionCardRecyclerViewAdapter(MainActivity.account.getTransactions());
+        myAdapter = new TransactionCardRecyclerViewAdapter(MainActivity.account.getTransactions()[10]);
+
+//        group.setOnCheckedChangeListener(new ChipGroup.OnCheckedChangeListener() {
+//            @Override
+//            public void onCheckedChanged(ChipGroup group, int checkedId) {
+//                MainActivity.account.getTransactions()[10].clear();
+//                MainActivity.account.getTransactions()[10].addAll( MainActivity.account.getTransactions()[checkedId-1]);
+//                myAdapter.notifyDataSetChanged();
+//            }
+//        });
+
         mRecyclerView.setAdapter(myAdapter);
+
+
         return view;
     }
 
 
-    public void updateHeader(View view){
+    public void updateHeader(View view) {
         TextView currentBalance = view.findViewById(R.id.CurrentBalance);
-        currentBalance.setText(NumberFormat.getCurrencyInstance(new Locale("en","US")).format(MainActivity.account.getBalance()));
+        currentBalance.setText(NumberFormat.getCurrencyInstance(new Locale("en", "US")).format(MainActivity.account.getBalance()));
         TextView income = view.findViewById(R.id.income_amount);
-        income.setText(NumberFormat.getCurrencyInstance(new Locale("en","US")).format(MainActivity.account.getIncome()));
+        income.setText(NumberFormat.getCurrencyInstance(new Locale("en", "US")).format(MainActivity.account.getIncome()));
         TextView savings = view.findViewById(R.id.saving_amount);
-        savings.setText(NumberFormat.getCurrencyInstance(new Locale("en","US")).format(MainActivity.account.getSavings()));
+        savings.setText(NumberFormat.getCurrencyInstance(new Locale("en", "US")).format(MainActivity.account.getSavings()));
         TextView expenses = view.findViewById(R.id.expenses_amount);
-        expenses.setText(NumberFormat.getCurrencyInstance(new Locale("en","US")).format(MainActivity.account.getExpenses()));
+        expenses.setText(NumberFormat.getCurrencyInstance(new Locale("en", "US")).format(MainActivity.account.getExpenses()));
 
     }
 

@@ -3,6 +3,8 @@ package com.example.android.budgety;
 import java.util.ArrayList;
 import java.util.Date;
 
+import androidx.fragment.app.FragmentManager;
+
 public class customerAccount {
 
     private double savings;
@@ -10,13 +12,15 @@ public class customerAccount {
     private double expenses;
     private double balance;
     ArrayList<Budget> budgets;
-    ArrayList<Transaction> transactions;
+    ArrayList<Transaction> [] transactions = new ArrayList[12];
 
     private double totalSavings;
 
     customerAccount(){
         this.budgets= new ArrayList<>();
-        this.transactions = new ArrayList<>();
+        for (int i = 0; i < transactions.length; i++) {
+            this.transactions[i] = new ArrayList<Transaction>();
+        }
         this.balance= 0;
         this.expenses=0;
         this.income=0;
@@ -63,13 +67,10 @@ public class customerAccount {
         budgets.add(0,budget);
     }
 
-    public ArrayList<Transaction> getTransactions(){
+    public ArrayList<Transaction>[] getTransactions(){
         return this.transactions;
     }
 
-    public void AddTransaction(Transaction transaction){
-        transactions.add(0,transaction);
-    }
 
     public double getTotalSavings() {
         return totalSavings;
@@ -84,8 +85,9 @@ public class customerAccount {
     }
 
     public void makeTransaction(int TMethod, double amount, String category, String decs, Date date) {
-        Transaction transaction = new Transaction(amount,decs,category,date);
-        transactions.add(0,transaction);
+        Transaction transaction = new Transaction(amount,decs,category,date,TMethod);
+        System.out.println("bbbbbbbbb"+ date.getMonth());
+        transactions[date.getMonth()].add(0,transaction);
         if(TMethod == R.id.income){
             addIncome(amount);
             this.balance += amount;
@@ -99,7 +101,10 @@ public class customerAccount {
             for (int i = 0; i<budgets.size(); i++){
                 if (category.equals(budgets.get(i).getbName())){
                     budgets.get(i).addToBalance(amount);
+                    int progress = (int) Math.floor((amount / budgets.get(i).getbTarget())*100);
+                    budgets.get(i).setProgress(progress);
                     this.totalSavings += amount;
+                    break;
                 }
             }
         }
@@ -119,4 +124,6 @@ public class customerAccount {
     private void addIncome(double amount) {
         this.income += amount;
     }
+
+
 }

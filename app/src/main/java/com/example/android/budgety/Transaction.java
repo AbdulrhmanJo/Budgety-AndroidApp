@@ -10,16 +10,26 @@ import java.util.Date;
 
 
 public class Transaction {
+    private int method;
     private double amount;
     private String desc;
     private String category;
     private Date date;
 
-    public Transaction(double amount, String desc, String category, Date date) {
+    public Transaction(double amount, String desc, String category, Date date,int method) {
         this.amount = amount;
         this.desc = desc;
         this.category = category;
         this.date = date;
+        this.method = method;
+    }
+
+    public int getMethod() {
+        return method;
+    }
+
+    public void setMethod(int method) {
+        this.method = method;
     }
 
     public double getAmount() {

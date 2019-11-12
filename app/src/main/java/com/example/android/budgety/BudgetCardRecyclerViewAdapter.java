@@ -31,6 +31,7 @@ public class BudgetCardRecyclerViewAdapter extends RecyclerView.Adapter<BudgetCa
         holder.BudgetName.setText(budgetList.get(position).getbName());
         holder.BudgetCurrentBalance.setText(NumberFormat.getCurrencyInstance(new Locale("en","US")).format(budgetList.get(position).getCurrentBalance()));
         holder.BudgetTarget.setText(NumberFormat.getCurrencyInstance(new Locale("en","US")).format(budgetList.get(position).getbTarget()));
+        holder.progressBar.setProgress(budgetList.get(position).getProgress());
     }
 
     @Override

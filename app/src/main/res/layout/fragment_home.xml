@@ -285,8 +285,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="November"
-                android:checked="true"
-                android:id="@+id/november"
                 />
 
             <com.google.android.material.chip.Chip

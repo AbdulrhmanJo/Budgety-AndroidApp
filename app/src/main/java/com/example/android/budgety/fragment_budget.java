@@ -22,6 +22,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
@@ -53,7 +54,7 @@ import javax.annotation.Nullable;
 
 
 public class fragment_budget extends Fragment {
-    BudgetCardRecyclerViewAdapter myAdapter;
+   static BudgetCardRecyclerViewAdapter myAdapter;
 
 
     FirebaseAuth firebaseAuth;
@@ -164,5 +165,6 @@ documentReference.addSnapshotListener(new EventListener<DocumentSnapshot>(){
         myAdapter.notifyItemInserted(0);
 
     }
+
 
 }
