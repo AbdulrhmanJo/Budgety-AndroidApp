@@ -40,4 +40,8 @@ public class Budget {
     public void setCurrentBalance(double currentBalance) {
         CurrentBalance = currentBalance;
     }
+
+    public void addToBalance(double amount){
+        this.CurrentBalance += amount;
+    }
 }

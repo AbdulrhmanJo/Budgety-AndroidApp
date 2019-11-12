@@ -1,6 +1,7 @@
 package com.example.android.budgety;
 
 import java.util.ArrayList;
+import java.util.Date;
 
 public class customerAccount {
 
@@ -9,10 +10,13 @@ public class customerAccount {
     private double expenses;
     private double balance;
     ArrayList<Budget> budgets;
+    ArrayList<Transaction> transactions;
+
     private double totalSavings;
 
     customerAccount(){
         this.budgets= new ArrayList<>();
+        this.transactions = new ArrayList<>();
         this.balance= 0;
         this.expenses=0;
         this.income=0;
@@ -59,7 +63,13 @@ public class customerAccount {
         budgets.add(0,budget);
     }
 
+    public ArrayList<Transaction> getTransactions(){
+        return this.transactions;
+    }
 
+    public void AddTransaction(Transaction transaction){
+        transactions.add(0,transaction);
+    }
 
     public double getTotalSavings() {
         return totalSavings;
@@ -71,5 +81,42 @@ public class customerAccount {
 
     public void addTotalSavings(double amount) {
         this.totalSavings += amount;
+    }
+
+    public void makeTransaction(int TMethod, double amount, String category, String decs, Date date) {
+        Transaction transaction = new Transaction(amount,decs,category,date);
+        transactions.add(0,transaction);
+        if(TMethod == R.id.income){
+            addIncome(amount);
+            this.balance += amount;
+        }
+        else if(TMethod == R.id.expenses) {
+            addExpenses(amount);
+            this.balance -= amount;
+        }
+        else{
+            addSavings(amount);
+            for (int i = 0; i<budgets.size(); i++){
+                if (category.equals(budgets.get(i).getbName())){
+                    budgets.get(i).addToBalance(amount);
+                    this.totalSavings += amount;
+                }
+            }
+        }
+
+
+
+    }
+
+    private void addSavings(double amount) {
+        this.savings += amount;
+    }
+
+    private void addExpenses(double amount) {
+        this.expenses -= amount;
+    }
+
+    private void addIncome(double amount) {
+        this.income += amount;
     }
 }

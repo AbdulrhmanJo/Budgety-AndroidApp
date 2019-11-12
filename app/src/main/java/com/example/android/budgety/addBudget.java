@@ -6,23 +6,16 @@ import androidx.fragment.app.FragmentManager;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 import com.google.android.material.button.MaterialButton;
-import com.google.android.material.card.MaterialCardView;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
-import android.widget.ScrollView;
-import android.widget.TextView;
-
 import java.util.HashMap;
 import java.util.Map;
 
@@ -44,6 +37,7 @@ public class addBudget extends BottomSheetDialogFragment {
         for (int i = 0; i < 10; i++) {
             System.out.println("THE ID IS " + UserId);
         }
+
         final View view = inflater.inflate(R.layout.fragment_add_budget, container, false);
 
         final MaterialButton addBudget = view.findViewById(R.id.add_budget);

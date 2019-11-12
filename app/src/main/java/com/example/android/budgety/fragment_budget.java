@@ -165,8 +165,4 @@ documentReference.addSnapshotListener(new EventListener<DocumentSnapshot>(){
 
     }
 
-
-    //public void
-
-
 }

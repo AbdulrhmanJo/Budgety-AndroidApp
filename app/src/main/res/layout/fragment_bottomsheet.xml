@@ -44,6 +44,7 @@ android:background="@drawable/sheet_stayle"
 
         <com.google.android.material.chip.ChipGroup
             android:layout_width="match_parent"
+            android:id="@+id/TransChip_group"
             android:layout_height="wrap_content"
             app:chipSpacingHorizontal="15dp"
             app:singleSelection="true"
@@ -58,6 +59,7 @@ android:background="@drawable/sheet_stayle"
                 app:chipCornerRadius="5dp"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
                 android:textAlignment="center"
+                android:id="@+id/income"
                 />
 
             <com.google.android.material.chip.Chip
@@ -68,6 +70,8 @@ android:background="@drawable/sheet_stayle"
                 app:chipCornerRadius="5dp"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
                 android:textAlignment="center"
+                android:id="@+id/saving"
+
                 />
 
             <com.google.android.material.chip.Chip
@@ -78,6 +82,8 @@ android:background="@drawable/sheet_stayle"
                 app:chipCornerRadius="5dp"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
                 android:textAlignment="center"
+                android:id="@+id/expenses"
+                android:checked="true"
                 />
 
         </com.google.android.material.chip.ChipGroup>
@@ -99,10 +105,10 @@ android:background="@drawable/sheet_stayle"
             />
 
         <Spinner
-            android:id="@+id/spinner1"
+            android:id="@+id/TransactionSpinner"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:entries="@array/country_arrays"
+            android:entries="@array/expenses"
              />
     </LinearLayout>
 
@@ -132,6 +138,7 @@ android:background="@drawable/sheet_stayle"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#fff"
                 android:hint="Write a note"
+                android:id="@+id/desc_holder"
                 />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -162,6 +169,8 @@ android:background="@drawable/sheet_stayle"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#fff"
                 android:hint="Write an amount"
+                android:id="@+id/amount_holder"
+                android:inputType="number"
                 />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -198,7 +207,7 @@ android:background="@drawable/sheet_stayle"
                 app:chipSpacingHorizontal="15dp"
                 app:singleSelection="true"
                 android:layout_gravity="center"
-                android:id="@+id/chip_group"
+                android:id="@+id/Datechip_group"
                 >
 
                 <com.google.android.material.chip.Chip
@@ -209,6 +218,8 @@ android:background="@drawable/sheet_stayle"
                     app:chipCornerRadius="5dp"
                     android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
                     android:textAlignment="center"
+                    android:id="@+id/today"
+                    android:checked="true"
                     />
 
                 <com.google.android.material.chip.Chip
@@ -219,6 +230,8 @@ android:background="@drawable/sheet_stayle"
                     app:chipCornerRadius="5dp"
                     android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
                     android:textAlignment="center"
+                    android:id="@+id/yasterday"
+
                     />
 
                 <com.google.android.material.chip.Chip
@@ -231,7 +244,7 @@ android:background="@drawable/sheet_stayle"
                     android:textAlignment="center"
                     app:chipIconVisible="true"
                     app:chipIcon="@drawable/round_date_range_24"
-                    android:id="@+id/add_date"
+                    android:id="@+id/date"
                     />
 
             </com.google.android.material.chip.ChipGroup>
@@ -246,7 +259,7 @@ android:background="@drawable/sheet_stayle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:backgroundTint="#fff"
-                    android:id="@+id/date_box"
+                    android:id="@+id/date_holder"
                     android:hint="Write a date"
                     />
 

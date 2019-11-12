@@ -14,7 +14,7 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
-    <string-array name="country_arrays">
+    <string-array name="expenses">
         <item>Food &amp; Drink</item>
         <item>Shopping</item>
         <item>Transport</item>
@@ -23,6 +23,15 @@
         <item>Car</item>
         <item>Travel</item>
         <item>Entertaiment</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="incom">
+        <item>Salary</item>
+        <item>Gifts</item>
+        <item>Loan</item>
+        <item>Business</item>
+        <item>Extra Income</item>
         <item>Other</item>
     </string-array>
 

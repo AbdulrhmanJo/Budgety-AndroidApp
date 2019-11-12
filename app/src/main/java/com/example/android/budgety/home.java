@@ -5,6 +5,9 @@ import android.os.Bundle;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
@@ -19,6 +22,8 @@ import java.util.Locale;
 
 
 public class home extends Fragment {
+
+    TransactionCardRecyclerViewAdapter myAdapter;
 
     public home() {
         // Required empty public constructor
@@ -42,18 +47,7 @@ public class home extends Fragment {
         // Inflate the layout for this fragment
 
         final View view = inflater.inflate(R.layout.fragment_home, container, false);
-
-
-        TextView currentBalance = view.findViewById(R.id.CurrentBalance);
-        currentBalance.setText(NumberFormat.getCurrencyInstance(new Locale("en","US")).format(MainActivity.account.getBalance()));
-        TextView income = view.findViewById(R.id.income_amount);
-        income.setText(NumberFormat.getCurrencyInstance(new Locale("en","US")).format(MainActivity.account.getIncome()));
-        TextView savings = view.findViewById(R.id.saving_amount);
-        savings.setText(NumberFormat.getCurrencyInstance(new Locale("en","US")).format(MainActivity.account.getSavings()));
-        TextView expenses = view.findViewById(R.id.expenses_amount);
-        expenses.setText(NumberFormat.getCurrencyInstance(new Locale("en","US")).format(MainActivity.account.getExpenses()));
-
-
+        updateHeader(view);
         final Toolbar toolbar = (Toolbar) view.findViewById(R.id.toolbar);
         toolbar.setTitle(null);
         toolbar.setNavigationIcon(R.drawable.round_account_circle_24);
@@ -84,10 +78,7 @@ public class home extends Fragment {
             }
         });
 
-
         final HorizontalScrollView horizontalScrollView = (HorizontalScrollView) view.findViewById(R.id.month_navigation_bar);
-
-
         horizontalScrollView.post(new Runnable() {
 
             @Override
@@ -98,12 +89,25 @@ public class home extends Fragment {
 
         });
 
-
+        RecyclerView mRecyclerView = view.findViewById(R.id.recycler_view);
+        GridLayoutManager mGridLayoutManager = new GridLayoutManager(getActivity(), 1);
+        mRecyclerView.setLayoutManager(mGridLayoutManager);
+        myAdapter = new TransactionCardRecyclerViewAdapter(MainActivity.account.getTransactions());
+        mRecyclerView.setAdapter(myAdapter);
         return view;
     }
 
 
+    public void updateHeader(View view){
+        TextView currentBalance = view.findViewById(R.id.CurrentBalance);
+        currentBalance.setText(NumberFormat.getCurrencyInstance(new Locale("en","US")).format(MainActivity.account.getBalance()));
+        TextView income = view.findViewById(R.id.income_amount);
+        income.setText(NumberFormat.getCurrencyInstance(new Locale("en","US")).format(MainActivity.account.getIncome()));
+        TextView savings = view.findViewById(R.id.saving_amount);
+        savings.setText(NumberFormat.getCurrencyInstance(new Locale("en","US")).format(MainActivity.account.getSavings()));
+        TextView expenses = view.findViewById(R.id.expenses_amount);
+        expenses.setText(NumberFormat.getCurrencyInstance(new Locale("en","US")).format(MainActivity.account.getExpenses()));
 
-
+    }
 
 }
