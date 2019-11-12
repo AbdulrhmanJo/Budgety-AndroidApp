@@ -20,12 +20,15 @@ import com.google.android.material.chip.Chip;
 import com.google.android.material.chip.ChipGroup;
 
 import java.text.NumberFormat;
+import java.util.ArrayList;
+import java.util.Date;
 import java.util.Locale;
 
 
 public class home extends Fragment {
 
     TransactionCardRecyclerViewAdapter myAdapter;
+    static ArrayList<Transaction> list = new ArrayList<>();
 
     public home() {
         // Required empty public constructor
@@ -79,15 +82,16 @@ public class home extends Fragment {
                 return true;
             }
         });
+        Date date = new Date();
         final ChipGroup group = view.findViewById(R.id.chip_group);
-        Chip chip = (Chip) group.getChildAt(10);
+        Chip chip = (Chip) group.getChildAt(date.getMonth());
         chip.setChecked(true);
         final HorizontalScrollView horizontalScrollView = (HorizontalScrollView) view.findViewById(R.id.month_navigation_bar);
         horizontalScrollView.post(new Runnable() {
 
             @Override
             public void run() {
-                horizontalScrollView.smoothScrollTo(group.getChildAt(11).getLeft(), 0);
+                horizontalScrollView.scrollTo(group.getChildAt(11).getLeft(), 0);
             }
 
         });
@@ -96,16 +100,18 @@ public class home extends Fragment {
         RecyclerView mRecyclerView = view.findViewById(R.id.recycler_view);
         GridLayoutManager mGridLayoutManager = new GridLayoutManager(getActivity(), 1);
         mRecyclerView.setLayoutManager(mGridLayoutManager);
-        myAdapter = new TransactionCardRecyclerViewAdapter(MainActivity.account.getTransactions()[10]);
+        list.clear();
+        list.addAll(MainActivity.account.getTransactions()[date.getMonth()]);
+        myAdapter = new TransactionCardRecyclerViewAdapter(list);
 
-//        group.setOnCheckedChangeListener(new ChipGroup.OnCheckedChangeListener() {
-//            @Override
-//            public void onCheckedChanged(ChipGroup group, int checkedId) {
-//                MainActivity.account.getTransactions()[10].clear();
-//                MainActivity.account.getTransactions()[10].addAll( MainActivity.account.getTransactions()[checkedId-1]);
-//                myAdapter.notifyDataSetChanged();
-//            }
-//        });
+        group.setOnCheckedChangeListener(new ChipGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(ChipGroup group, int checkedId) {
+                list.clear();
+                list.addAll(MainActivity.account.getTransactions()[checkedId-1]);
+                myAdapter.notifyDataSetChanged();
+            }
+        });
 
         mRecyclerView.setAdapter(myAdapter);
 
@@ -125,5 +131,6 @@ public class home extends Fragment {
         expenses.setText(NumberFormat.getCurrencyInstance(new Locale("en", "US")).format(MainActivity.account.getExpenses()));
 
     }
+
 
 }

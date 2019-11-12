@@ -12,6 +12,16 @@ public class customerAccount {
     private double expenses;
     private double balance;
     ArrayList<Budget> budgets;
+
+    public ArrayList<Transaction> getCurrentList() {
+        return currentList;
+    }
+
+    public void setCurrentList(ArrayList<Transaction> currentList) {
+        this.currentList = currentList;
+    }
+
+    ArrayList<Transaction> currentList;
     ArrayList<Transaction> [] transactions = new ArrayList[12];
 
     private double totalSavings;
@@ -25,6 +35,7 @@ public class customerAccount {
         this.expenses=0;
         this.income=0;
         this.savings=0;
+        this.currentList = new ArrayList<Transaction>();
     }
 
     public double getSavings() {
@@ -88,6 +99,8 @@ public class customerAccount {
         Transaction transaction = new Transaction(amount,decs,category,date,TMethod);
         System.out.println("bbbbbbbbb"+ date.getMonth());
         transactions[date.getMonth()].add(0,transaction);
+        System.out.println("bbbbbbbbb2"+ transactions[date.getMonth()].get(0).getDesc());
+
         if(TMethod == R.id.income){
             addIncome(amount);
             this.balance += amount;

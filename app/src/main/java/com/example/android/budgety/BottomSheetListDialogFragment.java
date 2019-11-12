@@ -8,6 +8,7 @@ import androidx.annotation.IdRes;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 import com.google.android.material.button.MaterialButton;
@@ -97,12 +98,12 @@ public class BottomSheetListDialogFragment extends BottomSheetDialogFragment {
                 }
 
                 FragmentManager fm = getFragmentManager();
-                home home = (home) fm.findFragmentById(R.id.fragment_container);
                 MainActivity.account.makeTransaction(Trans_chip_id, amount, category, decs, date);
-                home.updateHeader(home.getView());
-                home.myAdapter.notifyItemInserted(0);
-//
                 dismiss();
+                FragmentTransaction ft = getFragmentManager().beginTransaction();
+                ft.replace(R.id.fragment_container,
+                        new home()).commit();
+
             }
         });
 
@@ -129,5 +130,7 @@ public class BottomSheetListDialogFragment extends BottomSheetDialogFragment {
         return view;
 
     }
+
+
 
 }
