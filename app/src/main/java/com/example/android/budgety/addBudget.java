@@ -53,7 +53,7 @@ public class addBudget extends BottomSheetDialogFragment {
 
 
                 String Budget_Name = budgetName.getText().toString();
-                String Budget_Target = budgetTarget.getText().toString();
+                double Budget_Target = Double.parseDouble(budgetTarget.getText().toString());
 
 
                 // creating the document file in firebase site.......this for the sub collections
@@ -62,6 +62,7 @@ public class addBudget extends BottomSheetDialogFragment {
 
                 // set the variables inside the user and set it in the database in firebase
                 Map<String,Object> user = new HashMap<>();
+
                 user.put("Budegt Name" , Budget_Name);
                 user.put("target",Budget_Target);
                 user.put("current balance",0);

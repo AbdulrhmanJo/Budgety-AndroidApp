@@ -2,6 +2,7 @@ package com.example.android.budgety;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -28,6 +29,7 @@ import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Date;
 import java.util.List;
 
 import javax.annotation.Nullable;
@@ -150,6 +152,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void RetriveData(FirebaseAuth firebaseAuth) {
 
+//RETRIVE BUDGETS
+
 
         // ArrayList ListBudgets = new ArrayList();
         // firebaseAuth = FirebaseAuth.getInstance();
@@ -192,10 +196,10 @@ public class MainActivity extends AppCompatActivity {
                         public void onEvent(@Nullable DocumentSnapshot documentSnapshot, @Nullable FirebaseFirestoreException e) {
 
                             //  String s = documentSnapshot.getString("current balance");
-                            Double Target = Double.parseDouble(documentSnapshot.getString("target"));
+                            double target = documentSnapshot.getDouble("target");
 
 
-                            Budget b = new Budget(documentSnapshot.getString("Budegt Name"), Target);
+                            Budget b = new Budget(documentSnapshot.getString("Budegt Name"), target);
                             b.setCurrentBalance(documentSnapshot.getDouble("current balance"));
                             //addBudget(b);
                             MainActivity.account.AddBudget(b);
@@ -205,6 +209,70 @@ public class MainActivity extends AppCompatActivity {
                             //System.out.println("THE BUDGET GOAL  IS : " + documentSnapshot.getString("target"));
                             //System.out.println("THE BUDGET BALANCE  IS : " + documentSnapshot.getString("current balance"));
                             //System.out.println();
+
+
+                        }
+                    });
+
+
+                }
+            }
+
+
+        });
+
+
+        //RETRIVE TRANSACTIOONS
+
+
+        firestore.collection("users").document(UserID).collection("transactions").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+
+            List<String> list;
+
+
+            @Override
+            public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                if (task.isSuccessful()) {
+                    //creating the array list that we will save budget  in
+                    list = new ArrayList<>();
+
+                    for (QueryDocumentSnapshot document : task.getResult()) {
+
+                        list.add(document.getId());
+
+                    }
+                    Log.d("fragment_budget", list.toString());
+                } else {
+                    Log.d("fragment_budget", "Error getting documents: ", task.getException());
+                }
+
+                for (int i = 0; i < list.size(); i++) {
+
+                    String TransID = list.get(i);
+
+                    final DocumentReference documentReference = firestore.collection("users").document(UserID).collection("transactions").document(TransID);
+
+
+                    documentReference.addSnapshotListener(new EventListener<DocumentSnapshot>() {
+                        @Override
+                        public void onEvent(@Nullable DocumentSnapshot documentSnapshot, @Nullable FirebaseFirestoreException e) {
+
+                            //  String s = documentSnapshot.getString("current balance");
+                            String cat = documentSnapshot.getString("Category");
+                            double amount = documentSnapshot.getDouble("amount");
+                            String desc = documentSnapshot.getString("desc");
+                            double m = documentSnapshot.getDouble("month");
+                            double method = documentSnapshot.getDouble("method");
+
+
+                            System.out.println(";;;;" + cat);
+
+
+                            //PLEASE WRITE YOUR CODE TO CREATE THE CARDS HERE .......
+                            // THE DATE WONT MATTER NOW BEC YOU ARE NOT SHOWING IT AND I DID NOT SAVE IT INTO DATABASE YET ......
+
+
+                            // MainActivity.account.makeTransaction((int) Math.round(method), amount, cat, desc, new Date());
 
 
                         }
