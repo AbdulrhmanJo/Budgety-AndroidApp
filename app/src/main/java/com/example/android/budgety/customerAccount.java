@@ -55,8 +55,9 @@ public class customerAccount {
         return currentList;
     }
 
-    public void setCurrentList(ArrayList<Transaction> currentList) {
-        this.currentList = currentList;
+    public void setCurrentList(int month) {
+        currentList.clear();
+        this.currentList.addAll(this.transactions[month]);
     }
 
     public double getSavings() {
@@ -118,10 +119,7 @@ public class customerAccount {
 
     public void makeTransaction(int TMethod, double amount, String category, String decs, Date date) {
         Transaction transaction = new Transaction(amount, decs, category, date, TMethod);
-        System.out.println("bbbbbbbbb" + date.getMonth());
         transactions[date.getMonth()].add(0, transaction);
-        System.out.println("bbbbbbbbb2" + transactions[date.getMonth()].get(0).getDesc());
-
         if (TMethod == R.id.income) {
             addIncome(amount);
             this.balance += amount;
@@ -185,7 +183,7 @@ public class customerAccount {
                     documentReference.addSnapshotListener(new EventListener<DocumentSnapshot>() {
                         @Override
                         public void onEvent(@Nullable DocumentSnapshot documentSnapshot, @Nullable FirebaseFirestoreException e) {
-                            Double Target = documentSnapshot.getDouble("target");
+                            double Target = documentSnapshot.getDouble("target");
                             String n = documentSnapshot.getString("Budegt Name");
                             double curr = documentSnapshot.getDouble("current balance") + amount;
                             if (n.equalsIgnoreCase(category)) {
@@ -197,5 +195,6 @@ public class customerAccount {
             }
         });
     }
+
 
 }

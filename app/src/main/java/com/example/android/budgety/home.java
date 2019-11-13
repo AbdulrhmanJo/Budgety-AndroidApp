@@ -3,10 +3,11 @@ package com.example.android.budgety;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
-import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
@@ -27,7 +28,7 @@ import java.util.Locale;
 
 public class home extends Fragment {
 
-    TransactionCardRecyclerViewAdapter myAdapter;
+   static TransactionCardRecyclerViewAdapter myAdapter;
     static ArrayList<Transaction> list = new ArrayList<>();
 
     public home() {
@@ -52,7 +53,6 @@ public class home extends Fragment {
         // Inflate the layout for this fragment
 
         final View view = inflater.inflate(R.layout.fragment_home, container, false);
-        updateHeader(view);
         final Toolbar toolbar = (Toolbar) view.findViewById(R.id.toolbar);
         toolbar.setTitle(null);
         toolbar.setNavigationIcon(R.drawable.round_account_circle_24);
@@ -82,9 +82,9 @@ public class home extends Fragment {
                 return true;
             }
         });
-        Date date = new Date();
+        final Date date = new Date();
         final ChipGroup group = view.findViewById(R.id.chip_group);
-        Chip chip = (Chip) group.getChildAt(date.getMonth());
+        final Chip chip = (Chip) group.getChildAt(date.getMonth());
         chip.setChecked(true);
         final HorizontalScrollView horizontalScrollView = (HorizontalScrollView) view.findViewById(R.id.month_navigation_bar);
         horizontalScrollView.post(new Runnable() {
@@ -98,26 +98,32 @@ public class home extends Fragment {
 
 
         RecyclerView mRecyclerView = view.findViewById(R.id.recycler_view);
-        GridLayoutManager mGridLayoutManager = new GridLayoutManager(getActivity(), 1);
+        WrapContentGridLayoutManager mGridLayoutManager = new WrapContentGridLayoutManager(getActivity(), 1);
         mRecyclerView.setLayoutManager(mGridLayoutManager);
-        list.clear();
-        list.addAll(MainActivity.account.getTransactions()[date.getMonth()]);
-        myAdapter = new TransactionCardRecyclerViewAdapter(list);
+        MainActivity.account.setCurrentList(new Date().getMonth());
+        myAdapter = new TransactionCardRecyclerViewAdapter(MainActivity.account.getCurrentList());
 
         group.setOnCheckedChangeListener(new ChipGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(ChipGroup group, int checkedId) {
-                list.clear();
-                list.addAll(MainActivity.account.getTransactions()[checkedId-1]);
-                myAdapter.notifyDataSetChanged();
+                for (int i = 0; i < 12; i++) {
+                    Chip chip = (Chip)group.getChildAt(i);
+                    if(chip.isChecked()){
+                        MainActivity.account.setCurrentList(i);
+                        myAdapter.notifyDataSetChanged();
+                        break;
+                    }
+                }
             }
         });
 
         mRecyclerView.setAdapter(myAdapter);
+        updateHeader(view);
 
 
         return view;
     }
+
 
 
     public void updateHeader(View view) {
@@ -129,7 +135,6 @@ public class home extends Fragment {
         savings.setText(NumberFormat.getCurrencyInstance(new Locale("en", "US")).format(MainActivity.account.getSavings()));
         TextView expenses = view.findViewById(R.id.expenses_amount);
         expenses.setText(NumberFormat.getCurrencyInstance(new Locale("en", "US")).format(MainActivity.account.getExpenses()));
-
     }
 
 

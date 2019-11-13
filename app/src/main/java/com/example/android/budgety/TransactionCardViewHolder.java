@@ -20,7 +20,7 @@ public class TransactionCardViewHolder extends RecyclerView.ViewHolder{
         this.img = itemView.findViewById(R.id.img_holder);
         this.CategoryName = itemView.findViewById(R.id.category_holder);
         this.desc = itemView.findViewById(R.id.desc_holder);
-//        this.date = itemView.findViewById(R.id.date_holder);
+        this.date = itemView.findViewById(R.id.date_holder);
         this.amount = itemView.findViewById(R.id.amount_holder);
     }
 }

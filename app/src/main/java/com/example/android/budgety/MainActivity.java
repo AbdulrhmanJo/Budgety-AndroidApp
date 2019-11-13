@@ -2,8 +2,10 @@ package com.example.android.budgety;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentManager;
 
+import androidx.fragment.app.Fragment;
+
+import android.app.FragmentManager;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -13,6 +15,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -27,10 +30,12 @@ import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
+import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 
 import javax.annotation.Nullable;
 
@@ -109,9 +114,11 @@ public class MainActivity extends AppCompatActivity {
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if (task.isSuccessful()) {
                                     Toast.makeText(MainActivity.this, "Logged in Successfully", Toast.LENGTH_SHORT).show();
-                                    openHomePage();
                                     account = new customerAccount();
                                     RetriveData(fAuth);
+                                    openHomePage();
+
+//                                    home.updateHeader(getSupportFragmentManager().g);
 
 
                                 } else {
@@ -261,9 +268,9 @@ public class MainActivity extends AppCompatActivity {
                             String cat = documentSnapshot.getString("Category");
                             double amount = documentSnapshot.getDouble("amount");
                             String desc = documentSnapshot.getString("desc");
-                            double m = documentSnapshot.getDouble("month");
+                            String date = documentSnapshot.getString("date");
                             double method = documentSnapshot.getDouble("method");
-
+                            int id = (int) method;
 
                             System.out.println(";;;;" + cat);
 
@@ -271,15 +278,16 @@ public class MainActivity extends AppCompatActivity {
                             //PLEASE WRITE YOUR CODE TO CREATE THE CARDS HERE .......
                             // THE DATE WONT MATTER NOW BEC YOU ARE NOT SHOWING IT AND I DID NOT SAVE IT INTO DATABASE YET ......
 
-
-                            // MainActivity.account.makeTransaction((int) Math.round(method), amount, cat, desc, new Date());
-
+                            MainActivity.account.makeTransaction(id, amount, cat, desc, new Date(date));
+                            MainActivity.account.setCurrentList(new Date().getMonth());
 
                         }
                     });
 
 
                 }
+
+
             }
 
 

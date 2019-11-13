@@ -25,6 +25,7 @@ import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -118,7 +119,13 @@ public class BottomSheetListDialogFragment extends BottomSheetDialogFragment {
                 int Trans_chip_id = TranschipGroup.getCheckedChipId();
                 category = TransSpinner.getSelectedItem().toString();
                 desc = decsText.getText().toString();
+                String textAmount = amountText.getText().toString();
+                if (TextUtils.isEmpty(textAmount)) {
+                    amountText.setError("Amount is required!");
+                    return;
+                }
                 amount = Double.parseDouble(amountText.getText().toString());
+
                 int Date_chip_id = DatechipGroup.getCheckedChipId();
 
 
@@ -126,7 +133,7 @@ public class BottomSheetListDialogFragment extends BottomSheetDialogFragment {
                 if (Date_chip_id == R.id.today) {
                     date = new Date();
                 } else if (Date_chip_id == R.id.yasterday) {
-                    date = new Date();
+                    date = new Date(System.currentTimeMillis() - 24 * 60 * 60 * 1000);
                 } else {
                     SimpleDateFormat formatter1 = new SimpleDateFormat("dd/MM/yyyy");
                     try {
@@ -137,19 +144,25 @@ public class BottomSheetListDialogFragment extends BottomSheetDialogFragment {
                 }
 
 
+                MainActivity.account.makeTransaction(Trans_chip_id, amount, category, desc, date);
+                Date currentMonth = new Date();
+                if (currentMonth.getMonth() == date.getMonth()) {
+                    MainActivity.account.setCurrentList(currentMonth.getMonth());
+                    home.myAdapter.notifyItemInserted(0);
+
+                }
+                addTransaction(category, desc, amount, Trans_chip_id, date);
                 FragmentManager fm = getFragmentManager();
-                MainActivity.account.makeTransaction(Trans_chip_id, amount, category, desc, date);
-
-                home home = (home) fm.findFragmentById(R.id.fragment_container);
-                MainActivity.account.makeTransaction(Trans_chip_id, amount, category, desc, date);
-                home.updateHeader(home.getView());
-                home.myAdapter.notifyItemInserted(0);
-                addTransaction(category,desc,amount,method);
+                if ((fm.findFragmentById(R.id.fragment_container) instanceof home)) {
+                    home home = (home) fm.findFragmentById(R.id.fragment_container);
+                    home.updateHeader(home.getView());
+                } else {
+                    FragmentTransaction ft = getFragmentManager().beginTransaction();
+                    ft.replace(R.id.fragment_container,
+                            new home()).commit();
+                }
                 dismiss();
-                FragmentTransaction ft = getFragmentManager().beginTransaction();
-                ft.replace(R.id.fragment_container,
-                        new home()).commit();
-
+                Home_page.bottomNav.getMenu().getItem(0).setChecked(true);
             }
         });
 
@@ -164,7 +177,7 @@ public class BottomSheetListDialogFragment extends BottomSheetDialogFragment {
                     DatePickerDialog datePickerDialog = new DatePickerDialog(getActivity(), new DatePickerDialog.OnDateSetListener() {
                         @Override
                         public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
-                            textInputEditText.setText(dayOfMonth + "/" + month + "/" + year);
+                            textInputEditText.setText(dayOfMonth + "/" + (month + 1) + "/" + year);
                         }
                     }, y, m, d);
                     datePickerDialog.show();
@@ -177,44 +190,9 @@ public class BottomSheetListDialogFragment extends BottomSheetDialogFragment {
     }
 
 
-    public void addTransaction(String category, String desc, double amount, int method) {
-        String s = date.toString();
-        String arr[] = s.split(" ");
-        ArrayList l[] = MainActivity.account.transactions;
-        for (int i = 0; i < arr.length; i++) {
-            System.out.println(arr[i]);
+    public void addTransaction(String category, String desc, double amount, int method, Date date) {
 
-        }
-        int month = 0;
-
-        if (arr[1].equalsIgnoreCase("jan")) {
-            month = 1;
-        } else if (arr[1].equalsIgnoreCase("feb")) {
-            month = 2;
-        } else if (arr[1].equalsIgnoreCase("mar")) {
-            month = 3;
-        } else if (arr[1].equalsIgnoreCase("apr")) {
-            month = 4;
-        } else if (arr[1].equalsIgnoreCase("may")) {
-            month = 5;
-        } else if (arr[1].equalsIgnoreCase("jun")) {
-            month = 6;
-        } else if (arr[1].equalsIgnoreCase("jul")) {
-            month = 7;
-        } else if (arr[1].equalsIgnoreCase("aug")) {
-            month = 8;
-        } else if (arr[1].equalsIgnoreCase("sept")) {
-            month = 9;
-        } else if (arr[1].equalsIgnoreCase("oct")) {
-            month = 10;
-        } else if (arr[1].equalsIgnoreCase("nov")) {
-            month = 11;
-        } else if (arr[1].equalsIgnoreCase("des")) {
-            month = 12;
-        }
-
-
-        DocumentReference documentReference = firestore.collection("users").document(UserId).collection("transactions").document(counter + "");
+        DocumentReference documentReference = firestore.collection("users").document(UserId).collection("transactions").document();
         counter++;
         // set the variables inside the user and set it in the database in firebase
         Map<String, Object> user = new HashMap<>();
@@ -222,7 +200,7 @@ public class BottomSheetListDialogFragment extends BottomSheetDialogFragment {
         user.put("Category", category);
         user.put("desc", desc);
         user.put("amount", amount);
-        user.put("month", month);
+        user.put("date", date.toString());
         user.put("method", method);
 
 

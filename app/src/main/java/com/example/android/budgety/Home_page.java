@@ -22,18 +22,18 @@ import java.util.Calendar;
 
 public class Home_page extends AppCompatActivity {
     BottomSheetBehavior bottomSheetBehavior;
-
+    static BottomNavigationView bottomNav;
     int m,d,y;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page);
 
-        BottomNavigationView bottomNav = findViewById(R.id.bottom_navigation);
+        bottomNav = findViewById(R.id.bottom_navigation);
         bottomNav.setOnNavigationItemSelectedListener(navListener);
 
+        home h = new home();
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                new home()).commit();
-
+                h).commit();
 
 
 //        final Calendar calendar = Calendar.getInstance();
@@ -148,7 +148,6 @@ public class Home_page extends AppCompatActivity {
                     switch (item.getItemId()) {
                         case R.id.action_home:
                             selectedFragment = new home();
-
                             break;
                         case R.id.action_setting:
                             selectedFragment = new setting();

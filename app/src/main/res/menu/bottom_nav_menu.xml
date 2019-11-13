@@ -10,7 +10,6 @@
         android:iconTint="#54D3AD"
         android:title="Home"
         app:showAsAction="ifRoom"
-
         />
 
     <item

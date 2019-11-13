@@ -35,6 +35,8 @@ public class TransactionCardRecyclerViewAdapter extends RecyclerView.Adapter<Tra
     public void onBindViewHolder(@NonNull TransactionCardViewHolder holder, int position) {
         if(TransactionList.get(position).getMethod() == R.id.income){
             holder.img.setImageResource(R.drawable.round_keyboard_arrow_up_24);
+            holder.img.setColorFilter(Color.rgb(16,201,113));
+            holder.amount.setTextColor(Color.rgb(16,201,113));
         }else if(TransactionList.get(position).getMethod() == R.id.expenses){
             holder.img.setImageResource(R.drawable.round_keyboard_arrow_down_24);
             holder.img.setColorFilter(Color.rgb(201,16,16));
@@ -47,7 +49,7 @@ public class TransactionCardRecyclerViewAdapter extends RecyclerView.Adapter<Tra
         holder.CategoryName.setText(TransactionList.get(position).getCategory());
         holder.desc.setText(TransactionList.get(position).getDesc());
         holder.amount.setText(NumberFormat.getCurrencyInstance(new Locale("en","US")).format(TransactionList.get(position).getAmount()));
-//        holder.date.setText(formatDate(TransactionList.get(position).getDate()));
+        holder.date.setText(formatDate(TransactionList.get(position).getDate()));
     }
 
     @Override
