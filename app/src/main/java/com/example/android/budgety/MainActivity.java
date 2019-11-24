@@ -5,7 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import androidx.fragment.app.Fragment;
 
+import android.app.AlertDialog;
 import android.app.FragmentManager;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -14,12 +16,16 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.ProgressBar;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.button.MaterialButton;
+import com.google.android.material.card.MaterialCardView;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
@@ -142,6 +148,52 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
+//        RelativeLayout.LayoutParams ll = new RelativeLayout.LayoutParams(30,20);
+//        input.setLayoutParams(ll);
+//        input.setPadding(10,10,10,10);
+      final  Button forget = (Button) findViewById(R.id.ForgetPassword_Button);
+        final AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+        forget.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+
+                final EditText input = new EditText(MainActivity.this);
+                builder.setCancelable(true);
+                builder.setTitle("Reset your password ");
+                builder.setMessage("Please enter your email ");
+               builder.setView(input);
+                builder.setPositiveButton("Reset", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        FirebaseAuth.getInstance().sendPasswordResetEmail(input.getText().toString())
+                                .addOnCompleteListener(new OnCompleteListener<Void>() {
+                                    @Override
+                                    public void onComplete(@NonNull Task<Void> task) {
+                                        if (task.isSuccessful()) {
+                                            Toast.makeText(MainActivity.this, "Check your Email ", Toast.LENGTH_SHORT).show();
+                                            Log.d("S", "Email sent.");
+
+                                        }
+                                    }
+                                });
+                    }
+                });
+                builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+
+                    }
+                });
+
+
+                builder.show();
+            }
+
+
+        });
+
+
     }
 
 
@@ -159,7 +211,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void RetriveData(FirebaseAuth firebaseAuth) {
 
-//RETRIVE BUDGETS
+        //RETRIVE BUDGETS
 
 
         // ArrayList ListBudgets = new ArrayList();

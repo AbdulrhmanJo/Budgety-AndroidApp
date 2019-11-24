@@ -16,12 +16,12 @@
         android:textDirection="firstStrong">
 
         <TextView
-            android:id="@+id/Language"
+            android:id="@+id/Privacy"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:fontFamily="sans-serif-medium"
-            android:text="Information" />
+            android:text="Privacy" />
     </androidx.appcompat.widget.Toolbar>
 
     <androidx.constraintlayout.widget.ConstraintLayout

@@ -20,6 +20,6 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:fontFamily="sans-serif-medium"
-            android:text="Information" />
+            android:text="Language" />
     </androidx.appcompat.widget.Toolbar>
 </FrameLayout>
